@@ -1,2 +1,26 @@
 - provide(:title, "Ro'yxatdan o'tish")
 h1 Ro'yxatdan o'tish
+
+.row
+  .span6.offset3
+    = form_for(@user) do |f|
+
+      = render 'shared/error_messages', object: f.object
+
+      = f.label :name, "Ismingiz"
+      = f.text_field :name
+
+      = f.label :surname, "Familiyangiz"
+      = f.text_field :surname
+
+      = f.label :email, "Email manzilingiz"
+      = f.text_field :email
+
+      = f.label :password, "Parol"
+      = f.password_field :password
+
+      = f.label :password_confirmation, "Parolni tasdiqlang"
+      = f.password_field :password_confirmation
+
+      = f.submit t("messages.register_me"), class: "btn btn-large btn-primary"
+    end

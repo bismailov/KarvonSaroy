@@ -1,0 +1,10 @@
+- if object.errors.any?
+  #error_explanation
+    .alert.alert-error
+      /*#{object.errors.count} dona xato mavjud*/
+      #{t('messages.error_on_form', count: object.errors.count)}
+    ul
+      - object.errors.full_messages.each do |msg|
+        li * #{t(msg)}
+      end
+end

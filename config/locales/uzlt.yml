@@ -1,0 +1,41 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+uzlt:
+  activerecord:
+    errors: &errors
+      <<: *errors
+      models:
+        user: 
+          attributes:
+            name:
+              blank: bo'sh bo'lishi mumkin emas 
+              too_long: uzun (ko'pi bilan %{count} belgi)
+            surname:
+              blank: bo'sh bo'lishi mumkin emas 
+              too_long: uzun (ko'pi bilan %{count} belgi)
+            email:
+              blank: bo'sh bo'lishi mumkin emas 
+              invalid: xato kiritilgan
+            password:
+              blank: bo'sh bo'lishi mumkin emas
+              too_short: qisqa (minimum %{count} belgi)
+              confirmation: farq qilayapti, bu xato
+            password_confirmation:
+              blank: bo'sh bo'lishi mumkin emas 
+            password_digest:
+              blank: bo'sh bo'lishi mumkin emas
+    attributes:
+      user:
+        name: Ism
+        surname: Familiya
+        email: Email manzil
+        password: Parol
+        password_confirmation: Parol tasdig'i
+        password_digest: Parol
+  messages:
+    error_on_form:
+      one: Formada %{count} dona xato mavjud
+      other: Formada %{count} dona xato mavjud
+    registration_welcome: "Saytimizda ro'yxatdan o'tdingiz!"
+    register_me: Meni ro'yxatdan o'tkaz

@@ -20,7 +20,7 @@ describe "User pages" do
     before { visit user_path(user) }
 
     it { should have_selector('h1', text: user.name) }
-    it { should have_title("#{base_title}#{user.name}") }
+    it { should have_title("#{base_title}#{user.name} #{user.surname}") }
   end
 
   
@@ -41,17 +41,22 @@ describe "User pages" do
       before do
         fill_in "Ismingiz",               with: "Example User"
         fill_in "Familiyangiz",           with: "Userov"
-        fill_in "Email manzilingiz",      with: "User@example.com"
-        fill_in "Parol",                  with: "foobar"
+        fill_in "Email manzilingiz",      with: "user@example.com"
+        fill_in I18n.t("activerecord.attributes.user.password"), with: "foobar"
         fill_in "Parolni tasdiqlang",     with: "foobar"
       end
 
       it "should create a user" do
-        expect { click_button submit }.to_change(User, :count).by(1)  
+        expect { click_button submit }.to change(User, :count).by(1)  
+      end 
+      
+      describe "after saving the user" do
+        before { click_button submit}
+        let(:user) { User.find_by_email('user@example.com') }
+        it { should have_title("#{base_title}#{user.name} #{user.surname}") }
+        it { should have_selector('div.alert.alert-success', text: I18n.t("messages.registration_welcome"))}
       end
     end
+    
   end
-
-
 end
-

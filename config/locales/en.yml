@@ -2,4 +2,40 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors: &errors
+      <<: *errors
+      models:
+        user:
+          attributes:
+            name:
+              blank: can't be blank
+              too_long: is too long (maximum is %{count} characters))
+            surname:
+              blank: can't be blank
+              too_long: is too long (maximum is %{count} characters)
+            email:
+              blank: can't be blank
+              invalid: is invalid
+            password:
+              blank: can't be blank
+              too_short: is too short (minimum is %{count} characters)
+              confirmation: doesn't match confirmation
+            password_confirmation:
+              blank: confirmation can't be blank
+            password_digest:
+              blank: can't be blank
+    attributes:
+      user:
+        name: name
+        surname: surname
+        email: email 
+        password: password
+        password_confirmation: password confirmation 
+        password_digest: password digest 
+  messages:
+    error_on_form: 
+      one: The form contains %{count} error
+      other: The form contains %{count} errors
+    registration_welcome: "Welcome to the site! Registration is successful."
+  register_me: "Register"  

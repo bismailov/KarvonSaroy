@@ -1,8 +1,6 @@
-- provide(:title, @user.name)
-/*= @user.name+", "*/
-/*= @user.email*/
+- provide(:title, @user.name+" "+@user.surname)
 
 .row
   aside.span4
     section
-      h1 =@user.name
+      h1 #{@user.name} #{@user.surname}
