@@ -1,0 +1,19 @@
+= provide( :title, t("messages.session.sign_in") )
+
+h1 = t("messages.session.sign_in")
+
+.row
+  .span6.offset3
+    = form_for(:session, url: sessions_path) do |f|
+
+      /*= render 'shared/error_messages', object: f.object*/
+
+      = f.label :email, t("activerecord.attributes.user.email")
+      = f.text_field :email
+
+      = f.label :password, t("activerecord.attributes.user.password")
+      = f.password_field :password
+
+      = f.submit t("messages.session.sign_in"), class: "btn btn-large btn-primary" 
+
+    p #{t("messages.is_new_user")} #{link_to( t("messages.sign_up_now"), signup_path )}

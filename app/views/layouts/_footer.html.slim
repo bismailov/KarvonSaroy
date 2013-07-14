@@ -1,9 +1,13 @@
 footer.footer
   small  
-    '©KarvonSaroy.uz 2013     
-    a href='mailto:info@karvonsaroy.uz' info@karvonsaroy.uz
+    /*'©KarvonSaroy.uz 2013     */
+    /*a href='mailto:info@karvonsaroy.uz' info@karvonsaroy.uz*/
+    '©
+    a> href='mailto:info@karvonsaroy.uz' KarvonSaroy.uz,
+    '2013
+    
   nav
     ul
-      li = link_to "Home", root_path
-      li = link_to "About", about_path
+      li = link_to t("ui.home"), root_path
+      li = link_to t("ui.about"), about_path
       /*li = link_to "Blog", "#" */

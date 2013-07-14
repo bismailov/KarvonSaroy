@@ -35,15 +35,25 @@ describe "User pages" do
       it "should not create a user" do
         expect { click_button submit }.not_to change(User, :count)
       end
+
+
+      describe "after submission" do
+        before { click_button submit }
+
+        it { should have_title I18n.t("messages.registration") }
+        it { should have_content I18n.t("messages.error") }
+      end
+
     end
+  
 
     describe "with valid information" do
       before do
-        fill_in "Ismingiz",               with: "Example User"
-        fill_in "Familiyangiz",           with: "Userov"
-        fill_in "Email manzilingiz",      with: "user@example.com"
-        fill_in I18n.t("activerecord.attributes.user.password"), with: "foobar"
-        fill_in "Parolni tasdiqlang",     with: "foobar"
+        fill_in I18n.t("activerecord.attributes.user.name"),       with: "Example User"
+        fill_in I18n.t("activerecord.attributes.user.surname"),    with: "Userov"
+        fill_in I18n.t("activerecord.attributes.user.email"),      with: "user@example.com"
+        fill_in I18n.t("activerecord.attributes.user.password"),   with: "foobar"
+        fill_in I18n.t("activerecord.attributes.user.password_confirmation"),   with: "foobar"
       end
 
       it "should create a user" do
@@ -55,6 +65,7 @@ describe "User pages" do
         let(:user) { User.find_by_email('user@example.com') }
         it { should have_title("#{base_title}#{user.name} #{user.surname}") }
         it { should have_selector('div.alert.alert-success', text: I18n.t("messages.registration_welcome"))}
+        it { should have_link(I18n.t("messages.session.sign_out")) }
       end
     end
     

@@ -38,4 +38,19 @@ en:
       one: The form contains %{count} error
       other: The form contains %{count} errors
     registration_welcome: "Welcome to the site! Registration is successful."
-  register_me: "Register"  
+    register_me: "Register me"  
+    registration: Registration
+    is_new_user: New user?
+    sign_up_now: Sign up now!
+    error: error 
+    session:
+      sign_in: Sign in
+      sign_out: Sign out
+      invalid_credentials: Invalid email/password combination.
+  ui:
+    profile: Profile
+    home: Home
+    about: About
+    settings: Settings
+    users: Users
+    account: Account

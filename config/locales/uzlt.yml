@@ -39,3 +39,18 @@ uzlt:
       other: Formada %{count} dona xato mavjud
     registration_welcome: "Saytimizda ro'yxatdan o'tdingiz!"
     register_me: Meni ro'yxatdan o'tkaz
+    registration: Ro'yxatdan o'tish
+    is_new_user: Yangi qo'llanuvchimisiz?
+    sign_up_now: Ro'yxatdan o'ting!
+    error: xato
+    session:
+      sign_in: Saytga kirish
+      sign_out: Saytdan chiqish
+      invalid_credentials: Email yoki parol noto'g'ri kiritildi.
+  ui:
+    profile: Profil
+    home: Bosh sahifa
+    about: Biz haqimizda
+    settings: Parametrlar
+    users: Qo'llanuvchilar
+    account: Buyruqlar
