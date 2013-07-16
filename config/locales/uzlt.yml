@@ -43,6 +43,9 @@ uzlt:
     is_new_user: Yangi qo'llanuvchimisiz?
     sign_up_now: Ro'yxatdan o'ting!
     error: xato
+    update_your_profile: Profilni o'zgartirish
+    edit_user: Qo'llanuvchi ma'lumotini o'zgartirish
+    save_changes: O'zgarishlarni kiritish
     session:
       sign_in: Saytga kirish
       sign_out: Saytdan chiqish

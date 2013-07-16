@@ -43,6 +43,9 @@ en:
     is_new_user: New user?
     sign_up_now: Sign up now!
     error: error 
+    update_your_profile: Update your profile
+    edit_user: Edit user
+    save_changes: Save changes
     session:
       sign_in: Sign in
       sign_out: Sign out

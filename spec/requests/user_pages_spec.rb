@@ -10,8 +10,8 @@ describe "User pages" do
   describe "signup page" do
     before { visit signup_path}
 
-    it { should have_selector('h1', text: "Ro'yxatdan o'tish") }
-    it { should have_title("#{base_title}Ro'yxatdan o'tish")}
+    it { should have_selector('h1', text: I18n.t("messages.registration") ) }
+    it { should have_title("#{base_title}#{I18n.t("messages.registration")}" )}
 
   end
 
@@ -69,5 +69,22 @@ describe "User pages" do
       end
     end
     
+  end
+
+
+  describe "edit" do
+    let(:user) { FactoryGirl.create(:user) }
+    before { visit edit_user_path(user) }
+
+    describe "page" do
+      it { should have_selector('h1',    text: I18n.t("messages.update_your_profile") ) }
+      it { should have_title("#{base_title}#{I18n.t("messages.edit_user")}") }
+    end
+
+    describe "with invalid information" do
+      before { click_button I18n.t("messages.save_changes") }
+
+      it { should have_content(I18n.t("messages.error")) }
+    end
   end
 end

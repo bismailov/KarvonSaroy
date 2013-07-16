@@ -1,0 +1,23 @@
+- provide(:title, t("messages.edit_user"))
+h1 t("messages.update_your_profile")
+.row
+  .span6.offset3
+    = form_for(@user) do |f|
+      = render 'shared/error_messages', object: f.object
+
+      = f.label :name, t("activerecord.attributes.user.name")
+      = f.text_field :name
+       
+      = f.label :surname, t("activerecord.attributes.user.surname")
+      = f.text_field :surname
+       
+      = f.label :email, t("activerecord.attributes.user.email")
+      = f.text_field :email
+       
+      = f.label :password, t("activerecord.attributes.user.password")
+      = f.password_field :password
+       
+      = f.label :password_confirmation, t("activerecord.attributes.user.password_confirmation")
+      = f.password_field :password_confirmation
+       
+      = f.submit t("messages.save_changes"), class: "btn btn-large btn-primary"
