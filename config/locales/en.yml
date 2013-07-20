@@ -44,12 +44,16 @@ en:
     sign_up_now: Sign up now!
     error: error 
     update_your_profile: Update your profile
+    profile_updated: Profile updated
     edit_user: Edit user
     save_changes: Save changes
+    are_you_sure: Are you sure?
+    user_destroyed: User destroyed.
     session:
       sign_in: Sign in
       sign_out: Sign out
       invalid_credentials: Invalid email/password combination.
+      please_sign_in: Please sign in.
   ui:
     profile: Profile
     home: Home
@@ -57,3 +61,8 @@ en:
     settings: Settings
     users: Users
     account: Account
+    all_users: All users
+    delete: delete
+  will_paginate:
+    next_label: next
+    previous_label: previous

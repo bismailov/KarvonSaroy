@@ -1,0 +1,9 @@
+- provide(:title, t("ui.all_users"))
+h1 = t("ui.all_users")
+
+= will_paginate
+
+ul.users
+  = render @users
+
+= will_paginate

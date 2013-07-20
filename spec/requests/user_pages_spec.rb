@@ -74,17 +74,89 @@ describe "User pages" do
 
   describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
-    before { visit edit_user_path(user) }
+    before do
+      sign_in user
+      visit edit_user_path(user) 
+    end
 
     describe "page" do
-      it { should have_selector('h1',    text: I18n.t("messages.update_your_profile") ) }
+      it { should have_selector('h1', text: I18n.t("messages.update_your_profile") ) }
       it { should have_title("#{base_title}#{I18n.t("messages.edit_user")}") }
     end
 
     describe "with invalid information" do
       before { click_button I18n.t("messages.save_changes") }
 
-      it { should have_content(I18n.t("messages.error")) }
+      it { should have_content(I18n.t("messages.error") ) }
+    end
+
+    describe "with valid information" do
+      let(:new_name) { "New Name" }
+      let(:new_surname) { "New Surname" }
+      let(:new_email) { "new@example.com" }
+      before do
+        fill_in I18n.t("activerecord.attributes.user.name"),       with: new_name 
+        fill_in I18n.t("activerecord.attributes.user.surname"),    with: new_surname 
+        fill_in I18n.t("activerecord.attributes.user.email"),      with: new_email 
+        fill_in I18n.t("activerecord.attributes.user.password"),   with: user.password 
+        fill_in I18n.t("activerecord.attributes.user.password_confirmation"),   with: user.password 
+        click_button ( I18n.t("messages.save_changes") )
+      end
+      
+      it { should have_title("#{base_title}#{new_name} #{new_surname}") }
+      it { should have_selector('div.alert.alert-success')}
+      it { should have_link(I18n.t("messages.session.sign_out"), href: signout_path) }
+
+      specify { user.reload.name.should == new_name }
+      specify { user.reload.surname.should == new_surname }
+      specify { user.reload.email.should == new_email}
     end
   end
-end
+
+  describe "index" do
+
+    let(:user) { FactoryGirl.create(:user) }
+
+    before(:all) {50.times { FactoryGirl.create(:user) } }
+    after(:all) { User.delete_all }
+
+    before(:each) do
+      sign_in user
+      visit users_path
+    end
+
+    it { should have_title("#{base_title}#{I18n.t("ui.all_users")}") }
+    it { should have_selector('h1', text: I18n.t("ui.all_users")) }
+
+    describe "pagination" do
+
+      it { should have_selector('div.pagination') } 
+      
+      it "should list each user" do
+        User.paginate(page: 1).each do |user|
+          page.should have_selector('li', text: user.name)
+        end
+      end
+    end
+
+    describe "delete links" do
+      
+      it { should_not have_link(I18n.t('ui.delete')) }
+
+      describe "as an admin user" do
+        let(:admin) { FactoryGirl.create(:admin) }
+        before do
+          sign_in admin
+          visit users_path  
+        end
+
+        it { should have_link(I18n.t('ui.delete'), href: user_path(User.first)) }
+        it "should be able to delete another user" do
+          # expect { click_link(I18n.t('ui.delete')) }.to change(User, :count).by(-1)
+          expect { first(:link, I18n.t('ui.delete')).click }.to change(User, :count).by(-1)
+        end
+        it { should_not have_link(I18n.t('ui.delete'), href: user_path(admin)) }
+      end
+    end
+   end
+ end

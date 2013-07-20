@@ -44,16 +44,25 @@ uzlt:
     sign_up_now: Ro'yxatdan o'ting!
     error: xato
     update_your_profile: Profilni o'zgartirish
+    profile_updated: Ma'lumotlar o'zgartirildi. 
     edit_user: Qo'llanuvchi ma'lumotini o'zgartirish
-    save_changes: O'zgarishlarni kiritish
+    save_changes: O'zgartirishlarni saqlash
+    are_you_sure: Aminmisiz?
+    user_destroyed: Qo'llanuvchi tizimdan o'chirildi.
     session:
       sign_in: Saytga kirish
       sign_out: Saytdan chiqish
       invalid_credentials: Email yoki parol noto'g'ri kiritildi.
+      please_sign_in: Iltimos, saytga kiring.
   ui:
     profile: Profil
     home: Bosh sahifa
     about: Biz haqimizda
-    settings: Parametrlar
+    settings: Ma'lumotni o'zgartirish
     users: Qo'llanuvchilar
     account: Buyruqlar
+    all_users: Barcha qo'llanuvchilar
+    delete: o'chirish (delete)
+  will_paginate:                                                                                                                          
+    next_label: keyingi sahifa
+    previous_label: oldingi sahifa

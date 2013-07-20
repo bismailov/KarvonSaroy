@@ -7,12 +7,14 @@ header.navbar.navbar-fixed-top
           li = link_to t("ui.home"), root_path
           li = link_to t("ui.about"), about_path 
           - if signed_in?
-            li = link_to t("ui.users"), '#'
+            li = link_to t("ui.users"), users_path 
             li#fat-menu.dropdown 
-              a[href="#" class="dropdown-toggle" data-toggle="dropdown"] #{t("ui.account")} <b class=caret></b>
+              /*a[href="#" class="dropdown-toggle" data-toggle="dropdown"] #{t("ui.account")} <b class=caret></b>*/
+              a[href="#" class="dropdown-toggle" data-toggle="dropdown"] #{current_user.name} #{current_user.surname} <b class=caret></b>
               ul.dropdown-menu
+                  /*li = current_user.email*/
                   li = link_to t("ui.profile"), current_user
-                  li = link_to t("ui.settings"), "#"
+                  li = link_to t("ui.settings"), edit_user_path(current_user) 
                   li.divider
                   li = link_to t("messages.session.sign_out"), signout_path, method: "delete"
           - else
