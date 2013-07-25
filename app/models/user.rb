@@ -9,10 +9,13 @@
 #  updated_at      :datetime         not null
 #  password_digest :string(255)
 #  surname         :string(255)
+#  remember_token  :string(255)
+#  admin           :boolean          default(FALSE)
 #
 
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :surname, :password, :password_confirmation
+  attr_protected :admin
   has_secure_password
 
   before_save { |user| user.email = email.downcase }
