@@ -10,7 +10,7 @@ header.navbar.navbar-fixed-top
             li = link_to t("ui.users"), users_path 
             li#fat-menu.dropdown 
               /*a[href="#" class="dropdown-toggle" data-toggle="dropdown"] #{t("ui.account")} <b class=caret></b>*/
-              a[href="#" class="dropdown-toggle" data-toggle="dropdown"] #{current_user.name} #{current_user.surname} <b class=caret></b>
+              a[href="#" class="dropdown-toggle" data-toggle="dropdown"] #{current_user.name} #{current_user.surname} ID: #{current_user.id}<b class=caret></b>
               ul.dropdown-menu
                   /*li = current_user.email*/
                   li = link_to t("ui.profile"), current_user
