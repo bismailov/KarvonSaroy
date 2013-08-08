@@ -1,0 +1,15 @@
+- provide(:title, t("ui.all_subjects"))
+h1 = t("ui.all_subjects")
+
+= link_to  t('ui.new_subject'), new_subject_path, class: "btn btn-large btn-primary"
+<br/>  
+<br/>  
+
+= will_paginate
+
+/Just using users listing CSS style
+ul.users   
+  = render @subjects
+  
+
+= will_paginate

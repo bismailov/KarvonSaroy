@@ -1,0 +1,7 @@
+li
+  => link_to(subject.title.capitalize, subject)
+  - if current_user.admin?
+    ' |   
+    => link_to t('ui.edit'), edit_subject_path(subject)
+    '|
+    = link_to t('ui.delete'), subject, method: :delete, data: { confirm: t("messages.are_you_sure") }

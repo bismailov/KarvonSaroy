@@ -1,0 +1,10 @@
+- provide(:title, @student_level.title)
+
+.row
+  aside.span4
+    section
+      h1 = @student_level.title.capitalize
+
+      => link_to t('ui.edit'), edit_student_level_path(@student_level)
+      '|
+      = link_to t('ui.back'), student_levels_path

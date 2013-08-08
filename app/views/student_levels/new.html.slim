@@ -1,0 +1,12 @@
+- provide(:title, t('ui.new_student_level'))
+h1 = t('ui.new_student_level')
+.row
+  .span6.offset3
+    = form_for(@student_level) do |f|
+      
+      = render 'fields', f: f
+
+      = f.submit t("ui.new_student_level"), class: "btn btn-large btn-primary"
+      <br/>                               
+      <br/>                               
+      = link_to t("ui.back"), student_levels_path

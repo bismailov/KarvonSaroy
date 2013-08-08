@@ -157,6 +157,35 @@ describe "User pages" do
         end
         it { should_not have_link(I18n.t('ui.delete'), href: user_path(admin)) }
       end
+
     end
+
+
+
+
    end
+
+  describe "user permissions" do
+    let(:user) { FactoryGirl.create(:user) }
+    before do
+      sign_in user
+      visit root_path
+    end
+
+    context "user menus regular user" do
+      it { should_not have_content(I18n.t('ui.administration')) }
+    end
+
+    context "user menus admin user" do
+      let(:admin) { FactoryGirl.create(:admin) }
+      before do
+        sign_in admin
+        visit root_path  
+      end
+
+      it { should have_content(I18n.t('ui.administration')) }
+    end
+
+  end
+
  end

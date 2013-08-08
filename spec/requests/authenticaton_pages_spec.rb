@@ -43,7 +43,8 @@ describe "Authenticaton" do
       it { should have_link( I18n.t("ui.users"), href: users_path ) }
       it { should have_link( I18n.t("ui.profile"), href: user_path(user) ) }
       it { should have_link( I18n.t("ui.settings"), href: edit_user_path(user) ) }
-      it { should have_link( I18n.t("messages.session.sign_out"), href: signout_path(user) ) }
+      # it { should have_link( I18n.t("messages.session.sign_out"), href: signout_path(user) ) }
+      it { should have_content( I18n.t("messages.session.sign_out") ) }
 
       it { should_not have_link( I18n.t("messages.session.sign_in"), href: signin_path(user) ) }
     

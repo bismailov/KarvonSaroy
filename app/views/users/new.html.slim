@@ -1,5 +1,5 @@
-- provide(:title, "Ro'yxatdan o'tish")
-h1 Ro'yxatdan o'tish
+- provide(:title, t('messages.registration') )
+h1 = t('messages.registration')
 .row
   .span6.offset3
     = form_for(@user) do |f|
@@ -7,4 +7,4 @@ h1 Ro'yxatdan o'tish
       = render 'fields', f: f
 
       = f.submit t("messages.register_me"), class: "btn btn-large btn-primary"
-    end
+    /*end*/

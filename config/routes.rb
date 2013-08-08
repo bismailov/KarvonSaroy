@@ -1,8 +1,12 @@
 KarvonSaroy::Application.routes.draw do
 
+  get "subjects/new"
+
   # get "users/new"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :subjects
+  resources :student_levels
 
   root :to => 'static_pages#home'
 

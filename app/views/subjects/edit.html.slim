@@ -1,0 +1,12 @@
+- provide(:title, t('ui.edit_subject'))
+h1 = t('ui.edit_subject')
+.row
+  .span6.offset3
+    = form_for(@subject) do |f|
+      
+      = render 'fields', f: f
+
+      = f.submit t("ui.edit_subject"), class: "btn btn-large btn-primary"
+      <br/>                               
+      <br/>                               
+      = link_to t("ui.back"), subjects_path

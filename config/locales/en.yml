@@ -33,6 +33,10 @@ en:
         password: password
         password_confirmation: password confirmation 
         password_digest: password digest 
+      subject:
+        title: Title 
+      student_level:
+        title: Title 
   messages:
     error_on_form: 
       one: The form contains %{count} error
@@ -49,6 +53,12 @@ en:
     save_changes: Save changes
     are_you_sure: Are you sure?
     user_destroyed: User destroyed.
+    subject_created: Subject created.
+    subject_updated: Subject updated.
+    subject_deleted: Subject deleted.
+    student_level_created: Student level created.
+    student_level_updated: Student level updated.
+    student_level_deleted: Student level deleted.
     session:
       sign_in: Sign in
       sign_out: Sign out
@@ -62,7 +72,16 @@ en:
     users: Users
     account: Account
     all_users: All users
+    all_subjects: All subjects
+    new_subject: Add new subject
+    edit_subject: Edit subject title
+    all_student_levels: All student levels
+    new_student_level: Add new student level
+    edit_student_level: Edit student level title
     delete: delete
+    edit: edit
+    back: back
+    administration: Administration
   will_paginate:
     next_label: next
     previous_label: previous

@@ -1,0 +1,7 @@
+li
+  => link_to(student_level.title.capitalize, student_level)
+  - if current_user.admin?
+    ' |   
+    => link_to t('ui.edit'), edit_student_level_path(student_level)
+    '|
+    = link_to t('ui.delete'), student_level, method: :delete, data: { confirm: t("messages.are_you_sure") }

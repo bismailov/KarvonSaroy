@@ -33,6 +33,10 @@ uzlt:
         password: Parol
         password_confirmation: Parol tasdig'i
         password_digest: Parol
+      subject:
+        title: Predmet nomi
+      student_level:
+        title: O'quvchi darajasi 
   messages:
     error_on_form:
       one: Formada %{count} dona xato mavjud
@@ -49,6 +53,12 @@ uzlt:
     save_changes: O'zgartirishlarni saqlash
     are_you_sure: Aminmisiz?
     user_destroyed: Qo'llanuvchi tizimdan o'chirildi.
+    subject_created: Yangi predmet nomi kiritildi.
+    subject_updated: Predmet nomi o'zgartirildi. 
+    subject_deleted: Predmet nomi tizimdan o'chirildi (deleted).
+    student_level_created: Yangi o'quvchi darajasi kiritildi.
+    student_level_updated: O'quvchi darajasi o'zgartirildi. 
+    student_level_deleted: O'quvchi darajasi tizimdan o'chirildi (deleted).
     session:
       sign_in: Saytga kirish
       sign_out: Saytdan chiqish
@@ -62,7 +72,16 @@ uzlt:
     users: Qo'llanuvchilar
     account: Buyruqlar
     all_users: Barcha qo'llanuvchilar
+    all_subjects: Barcha predmetlar
+    new_subject: Yangi predmet qo'shish
+    edit_subject: Predmetni tahrirlash
+    all_student_levels: Barcha o'quvchi darajalari
+    new_student_level: Yangi o'quvchi darajasini qo'shish
+    edit_student_level: O'quvchi darajasini tahrirlash
     delete: o'chirish (delete)
-  will_paginate:                                                                                                                          
+    edit: tahrirlash (edit)
+    back: orqaga
+    administration: Boshqaruv menusi
+  will_paginate:
     next_label: keyingi sahifa
     previous_label: oldingi sahifa

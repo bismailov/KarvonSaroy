@@ -1,0 +1,15 @@
+- provide(:title, t("ui.all_student_levels"))
+h1 = t("ui.all_student_levels")
+
+= link_to  t('ui.new_student_level'), new_student_level_path, class: "btn btn-large btn-primary"
+<br/>  
+<br/>  
+
+= will_paginate
+
+/Just using users listing CSS style
+ul.users   
+  = render @student_levels
+  
+
+= will_paginate
