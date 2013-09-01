@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_filter :editor_user, only [:edit, :update, :destroy] 
+  before_filter :editor_user, only: [:edit, :update, :destroy] 
 
   #GET /courses
   def index
