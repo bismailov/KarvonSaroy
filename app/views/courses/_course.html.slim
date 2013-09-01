@@ -1,0 +1,7 @@
+li
+  => link_to(course.title.capitalize, course)
+  - if current_user.admin?
+    ' |   
+    => link_to t('ui.edit'), edit_course_path(course)
+    '|
+    = link_to t('ui.delete'), course, method: :delete, data: { confirm: t("messages.are_you_sure") }

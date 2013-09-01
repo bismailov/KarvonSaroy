@@ -158,6 +158,17 @@ describe "User pages" do
         it { should_not have_link(I18n.t('ui.delete'), href: user_path(admin)) }
       end
 
+      describe "as an editor user" do
+        let(:editor) { FactoryGirl.create(:editor) }
+        before do
+          sign_in editor
+          visit users_path  
+        end
+
+        it { should_not have_link(I18n.t('ui.delete'), href: user_path(User.first)) }
+        it { should_not have_link(I18n.t('ui.delete'), href: user_path(editor)) }
+      end
+
     end
 
 

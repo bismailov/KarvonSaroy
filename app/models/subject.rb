@@ -11,9 +11,17 @@
 class Subject < ActiveRecord::Base
   attr_accessible :title
 
+  has_many :courses
+
   before_save { |subject| subject.title = title.downcase }
 
   validates :title, presence: true, length: {maximum: 130}, uniqueness: {case_sensitive: false} 
+
+  private
+    def title_for_select
+      title.capitalize
+    end
+
 end
 
 # Also, to reinforce uniqueness on database level, add an index to title field. Page 310 of Tutorial

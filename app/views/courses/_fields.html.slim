@@ -1,0 +1,13 @@
+= render 'shared/error_messages', object: f.object
+
+= f.label :title, t("activerecord.attributes.course.title")
+= f.text_field :title
+
+= f.label :subject_id, t("activerecord.attributes.subject.title")
+= f.collection_select(:subject_id, Subject.all, :id, :title_for_select)
+
+= f.label :student_level_id, t("activerecord.attributes.student_level.title")
+= f.collection_select(:student_level_id, StudentLevel.all, :id, :title_for_select)
+
+= f.label :objectives, t("activerecord.attributes.course.objectives")
+= f.text_area :objectives, rows: 15, cols: 10 

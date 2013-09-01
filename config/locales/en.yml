@@ -34,9 +34,12 @@ en:
         password_confirmation: password confirmation 
         password_digest: password digest 
       subject:
-        title: Title 
+        title: title 
       student_level:
-        title: Title 
+        title: title 
+      course:
+        title: title
+        objectives: objectives
   messages:
     error_on_form: 
       one: The form contains %{count} error
@@ -59,6 +62,9 @@ en:
     student_level_created: Student level created.
     student_level_updated: Student level updated.
     student_level_deleted: Student level deleted.
+    course_created: Course created.
+    course_updated: Course updated.
+    course_deleted: Course deleted.
     session:
       sign_in: Sign in
       sign_out: Sign out
@@ -78,6 +84,9 @@ en:
     all_student_levels: All student levels
     new_student_level: Add new student level
     edit_student_level: Edit student level title
+    all_courses: All courses 
+    new_course: Add new course
+    edit_course: Edit course
     delete: delete
     edit: edit
     back: back

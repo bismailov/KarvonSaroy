@@ -9,5 +9,19 @@ FactoryGirl.define do
     factory :admin do
       admin true
     end
+
+    factory :editor do
+      editor true
+    end
+
   end
+
+  factory :subject do
+    title "French for Adults"
+  end
+
+  factory :student_level do
+    title "Advanced"
+  end
+
 end

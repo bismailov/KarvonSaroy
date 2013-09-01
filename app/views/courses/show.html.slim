@@ -1,0 +1,16 @@
+- provide(:title, @course.title)
+
+.row
+  aside.span4
+    section
+      h1 = @course.title.capitalize
+
+      => link_to t('ui.edit'), edit_course_path(@course)
+      '|
+      = link_to t('ui.back'), courses_path
+
+      = @course.subject.title
+
+      = @course.student_level.title
+
+      = @course.objectives

@@ -7,6 +7,7 @@ KarvonSaroy::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :subjects
   resources :student_levels
+  resources :courses
 
   root :to => 'static_pages#home'
 

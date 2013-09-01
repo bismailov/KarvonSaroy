@@ -37,6 +37,9 @@ uzlt:
         title: Predmet nomi
       student_level:
         title: O'quvchi darajasi 
+      course:
+        title: Kurs nomi
+        objectives: Kurs haqida ma'lumot
   messages:
     error_on_form:
       one: Formada %{count} dona xato mavjud
@@ -59,6 +62,9 @@ uzlt:
     student_level_created: Yangi o'quvchi darajasi kiritildi.
     student_level_updated: O'quvchi darajasi o'zgartirildi. 
     student_level_deleted: O'quvchi darajasi tizimdan o'chirildi (deleted).
+    course_created: Yangi kurs kiritildi.
+    course_updated: Kurs o'zgartirildi.
+    course_deleted: Kurs tizimdan o'chirildi (deleted).
     session:
       sign_in: Saytga kirish
       sign_out: Saytdan chiqish
@@ -78,6 +84,9 @@ uzlt:
     all_student_levels: Barcha o'quvchi darajalari
     new_student_level: Yangi o'quvchi darajasini qo'shish
     edit_student_level: O'quvchi darajasini tahrirlash
+    all_courses: Barcha kurslar 
+    new_course: Yangi kurs qo'shish
+    edit_course: Kursni tahrirlash
     delete: o'chirish (delete)
     edit: tahrirlash (edit)
     back: orqaga

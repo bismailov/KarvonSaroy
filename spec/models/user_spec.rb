@@ -11,6 +11,8 @@
 #  surname         :string(255)
 #  remember_token  :string(255)
 #  admin           :boolean          default(FALSE)
+#  editor          :boolean          default(FALSE)
+#  role            :string(255)
 #
 
 require 'spec_helper'
@@ -32,10 +34,12 @@ describe User do
   it { should respond_to(:authenticate) }
   it { should respond_to(:remember_token) }
   it { should respond_to(:admin) }
+  it { should respond_to(:editor) }
   
 
   it { should be_valid }
   it { should_not be_admin }
+  it { should_not be_editor }
 
   describe "when name is not present" do
     before { @user.name = "" } 
@@ -160,6 +164,15 @@ describe User do
     it { should be_admin }
   end
 
+  describe "with editor attribute set to 'true'" do
+    before do
+      @user.save!
+      @user.toggle!(:editor)
+    end
+
+    it { should be_editor }
+  end
+
   describe "accessible attributes" do
     it "should not allow access to admin" do
       expect do
@@ -168,5 +181,12 @@ describe User do
       # end.should raise_error(ActiveModel::MassAssignmentSecurity::Error)
       end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
     end
+
+    it "should not allow access to editor" do
+      expect do
+        User.new(editor: true)
+      end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
+    end
+
   end
 end
