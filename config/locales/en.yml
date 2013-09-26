@@ -91,6 +91,7 @@ en:
     edit: edit
     back: back
     administration: Administration
+    course_author: Course author
   will_paginate:
     next_label: next
     previous_label: previous

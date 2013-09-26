@@ -6,15 +6,33 @@ FactoryGirl.define do
     password  "foobar"
     password_confirmation "foobar"
     
+    # factory :admin do
+      # admin true
+    # end
+
     factory :admin do
-      admin true
+      role "admin"
     end
 
     factory :editor do
-      editor true
+      role "editor"
+    end
+
+    factory :author do
+      role "author"
     end
 
   end
+
+
+  factory :course do
+    sequence(:title) { |n| "Title #{n}" }
+    sequence(:objectives) { |n| "Objectives #{n}" }
+    user_id 1 
+    subject_id 1
+    student_level_id 1
+  end
+
 
   factory :subject do
     title "French for Adults"

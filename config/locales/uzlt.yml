@@ -91,6 +91,7 @@ uzlt:
     edit: tahrirlash (edit)
     back: orqaga
     administration: Boshqaruv menusi
+    course_author: Kurs muallifi
   will_paginate:
     next_label: keyingi sahifa
     previous_label: oldingi sahifa

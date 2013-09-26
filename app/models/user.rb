@@ -10,17 +10,15 @@
 #  password_digest :string(255)
 #  surname         :string(255)
 #  remember_token  :string(255)
-#  admin           :boolean          default(FALSE)
-#  editor          :boolean          default(FALSE)
 #  role            :string(255)
 #
 
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :surname, :password, :password_confirmation
-  attr_protected :admin, :editor
+  attr_protected :admin, :editor, :role
   has_secure_password
 
-  ROLES = %w[admin moderator editor author banned]
+  ROLES = %w[admin moderator editor author banned] << nil
 
   has_many :courses
 
@@ -33,6 +31,13 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6 } #, presence:true >>because there is password_digest
   validates :password_confirmation, presence: true 
+  validates :role, inclusion: { in: ROLES }
+
+  default_scope order: 'users.surname ASC'
+
+  def admin?
+    return 'admin' == self.role
+  end
 
   private
     def create_remember_token
