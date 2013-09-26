@@ -1,5 +1,10 @@
 li 
   = link_to(user.name+" "+user.surname+ " >>> "+user.email, user)
-  '  |    
-  - if current_user.admin? && !current_user?(user)
+  - if 'admin' == current_user.role
+    - if user.role
+      '  |   
+    = user.role
+  /*- if current_user.admin? && !current_user?(user)*/
+  - if 'admin' == current_user.role && !current_user?(user)
+    '  | 
     = link_to t("ui.delete"), user, method: :delete, data: { confirm: t("messages.are_you_sure") }

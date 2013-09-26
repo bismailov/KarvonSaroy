@@ -58,8 +58,11 @@ module SessionsHelper
   def authorized_for_roles(*args)
     # From: http://stackoverflow.com/a/6076035/999973
     # args.any? { |role_name| ROLES.include? role_name  }
-    # ROLES = %w(admin editor user)
+    # ROLES = %w[admin moderator editor author banned] in user model
+    # calling it:
+    # before_filter(only: [:edit, :update, :destroy]) {|c| c.authorized_for_roles "admin", "editor"}
   
-    args.any? { |role_name| current_user.role == role_name }
+    # args.any? { |role_name| current_user.role == role_name }
+    redirect_to(root_path) unless args.any? { |role_name| current_user.role == role_name }
   end
 end

@@ -120,6 +120,9 @@ describe "User pages" do
     before(:all) {50.times { FactoryGirl.create(:user) } }
     after(:all) { User.delete_all }
 
+    before(:all) {10.times { FactoryGirl.create(:course) } }
+    after(:all) { Course.delete_all }
+
     before(:each) do
       sign_in user
       visit users_path
@@ -149,7 +152,7 @@ describe "User pages" do
           sign_in admin
           visit users_path  
         end
-
+                                      # look which user comes from db
         it { should have_link(I18n.t('ui.delete'), href: user_path(User.first)) }
         it "should be able to delete another user" do
           # expect { click_link(I18n.t('ui.delete')) }.to change(User, :count).by(-1)
@@ -169,12 +172,82 @@ describe "User pages" do
         it { should_not have_link(I18n.t('ui.delete'), href: user_path(editor)) }
       end
 
+      describe "as an author" do
+        let(:author) { FactoryGirl.create(:author) }
+        before do
+          sign_in author
+          visit users_path  
+        end
+
+        it { should_not have_link(I18n.t('ui.delete'), href: user_path(User.first)) }
+        it { should_not have_link(I18n.t('ui.delete'), href: user_path(author)) }
+      end
+
+      describe "as a user" do
+        let(:user) { FactoryGirl.create(:user) }
+        before do
+          sign_in user
+          visit users_path  
+        end
+
+        it { should_not have_link(I18n.t('ui.delete'), href: user_path(User.first)) }
+        it { should_not have_link(I18n.t('ui.delete'), href: user_path(user)) }
+      end
+
+      #courses page delete links
+
+      describe "as an admin user" do
+        let(:admin) { FactoryGirl.create(:admin) }
+        before do
+          sign_in admin
+          visit courses_path  
+        end
+
+        it { should have_link(I18n.t('ui.delete'), href: course_path(Course.first)) }
+        it "should be able to delete a course" do
+          # expect { click_link(I18n.t('ui.delete')) }.to change(Course, :count).by(-1)
+          expect { first(:link, I18n.t('ui.delete')).click }.to change(Course, :count).by(-1)
+        end
+        # it { should_not have_link(I18n.t('ui.delete'), href: user_path(admin)) }
+      end
+
+      describe "as an editor" do
+        let(:editor) { FactoryGirl.create(:editor) }
+        before do
+          sign_in editor
+          visit courses_path  
+        end
+
+        it { should_not have_link(I18n.t('ui.delete'), href: course_path(Course.first)) }
+      end
+
+      describe "as an author" do
+        let(:author) { FactoryGirl.create(:author) }
+        before do
+          sign_in author
+          visit courses_path  
+        end
+
+        it { should_not have_link(I18n.t('ui.delete'), href: course_path(Course.first)) }
+      end
+
+      describe "as a user" do
+        let(:user) { FactoryGirl.create(:user) }
+        before do
+          sign_in user
+          visit courses_path  
+        end
+
+        it { should_not have_link(I18n.t('ui.delete'), href: course_path(Course.first)) }
+      end
+
+
     end
 
 
 
 
-   end
+  end
 
   describe "user permissions" do
     let(:user) { FactoryGirl.create(:user) }
@@ -184,6 +257,27 @@ describe "User pages" do
     end
 
     context "user menus regular user" do
+      it { should_not have_content(I18n.t('ui.administration')) }
+    end
+
+    context "user menus editor" do
+      let(:editor) { FactoryGirl.create(:editor) }
+      before do
+        sign_in editor
+        visit root_path  
+      end
+
+      it { should_not have_content(I18n.t('ui.administration')) }
+    end
+
+
+    context "user menus author" do
+      let(:author) { FactoryGirl.create(:author) }
+      before do
+        sign_in author
+        visit root_path  
+      end
+
       it { should_not have_content(I18n.t('ui.administration')) }
     end
 

@@ -7,10 +7,22 @@
 
       => link_to t('ui.edit'), edit_course_path(@course)
       '|
-      = link_to t('ui.back'), courses_path
+      => link_to t('ui.back'), courses_path
 
-      = @course.subject.title
+      p
+        b = t('activerecord.attributes.subject.title')
+        |:&nbsp;
+        = @course.subject.title
 
-      = @course.student_level.title
+        br 
+        b = t('activerecord.attributes.student_level.title')
+        |:&nbsp;
+        = @course.student_level.title
 
+        br 
+        b = t('ui.course_author')
+        |:&nbsp;
+        = link_to @course.user.name + " " + @course.user.surname, @course.user
+
+      h4 = t('activerecord.attributes.course.objectives')
       = @course.objectives
