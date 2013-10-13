@@ -65,6 +65,9 @@ en:
     course_created: Course created.
     course_updated: Course updated.
     course_deleted: Course deleted.
+    lesson_created: Lesson created.
+    lesson_updated: Lesson updated.
+    lesson_deleted: Lesson deleted.
     session:
       sign_in: Sign in
       sign_out: Sign out

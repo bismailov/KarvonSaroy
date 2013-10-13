@@ -7,7 +7,9 @@ KarvonSaroy::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :subjects
   resources :student_levels
-  resources :courses
+  resources :courses do
+    resources :lessons #, shallow: true
+  end
 
   root :to => 'static_pages#home'
 

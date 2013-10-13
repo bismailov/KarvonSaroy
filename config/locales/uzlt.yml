@@ -65,6 +65,9 @@ uzlt:
     course_created: Yangi kurs kiritildi.
     course_updated: Kurs o'zgartirildi.
     course_deleted: Kurs tizimdan o'chirildi (deleted).
+    lesson_created: Yangi dars kiritildi.
+    lesson_updated: Dars o'zgartirildi. 
+    lesson_deleted: Dars o'chirildi (deleted). 
     session:
       sign_in: Saytga kirish
       sign_out: Saytdan chiqish

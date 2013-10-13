@@ -2,8 +2,9 @@ li
   => link_to(course.title.capitalize, course)
   ' | #{course.subject.title.capitalize}
   ' | #{course.student_level.title.capitalize}
-  - if current_user.admin?
-    ' |   
-    => link_to t('ui.edit'), edit_course_path(course)
-    '|
-    = link_to t('ui.delete'), course, method: :delete, data: { confirm: t("messages.are_you_sure") }
+  /*- if current_user*/
+    - if current user && current_user.admin?
+      ' |   
+      => link_to t('ui.edit'), edit_course_path(course)
+      '|
+      = link_to t('ui.delete'), course, method: :delete, data: { confirm: t("messages.are_you_sure") }

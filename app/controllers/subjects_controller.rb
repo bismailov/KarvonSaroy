@@ -1,5 +1,6 @@
 class SubjectsController < ApplicationController
-  before_filter :admin_user 
+  # before_filter :admin_user 
+  before_filter(only: [:new, :create, :edit, :update, :destroy]) { |c| c.authorized_for_roles("admin", "editor") } 
 
   #GET /subjects
   def index

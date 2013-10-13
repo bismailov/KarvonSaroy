@@ -47,13 +47,13 @@ module SessionsHelper
     redirect_to(root_path) unless current_user?(@user)
   end
 
-  def admin_user
-    redirect_to(root_path) unless current_user.admin?
-  end
+  # def admin_user
+    # redirect_to(root_path) unless current_user.admin?
+  # end
 
-  def author_user
-    redirect_to(root_path) unless current_user.author?
-  end
+  # def author_user
+    # redirect_to(root_path) unless current_user.author?
+  # end
 
   def authorized_for_roles(*args)
     # From: http://stackoverflow.com/a/6076035/999973
@@ -63,6 +63,15 @@ module SessionsHelper
     # before_filter(only: [:edit, :update, :destroy]) {|c| c.authorized_for_roles "admin", "editor"}
   
     # args.any? { |role_name| current_user.role == role_name }
+  
+
+    unless signed_in?
+     self.current_user = User.create( name: "Guest" )
+     redirect_to(root_path) unless args.any? { |role_name| current_user.role == role_name }
+     self.current_user = nil
+     return
+    end
+
     redirect_to(root_path) unless args.any? { |role_name| current_user.role == role_name }
   end
 end

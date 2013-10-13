@@ -18,5 +18,13 @@ namespace :db do
                   password: password,
                   password_confirmation: password)
     end
+
+    StudentLevel.create!(title: "beginner")
+    StudentLevel.create!(title: "elementary")
+    StudentLevel.create!(title: "intermediate")
+    StudentLevel.create!(title: "upper intermediate")
+    StudentLevel.create!(title: "advanced")
+    StudentLevel.create!(title: "proficiency")
+    
   end
 end
