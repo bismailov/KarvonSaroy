@@ -14,10 +14,13 @@
 
 class Course < ActiveRecord::Base
   attr_accessible :objectives, :title, :subject_id, :student_level_id
+  attr_protected :user_id
 
   belongs_to :user
   belongs_to :subject
   belongs_to :student_level
+
+  has_many :lessons
 
   before_save {|course| course.title = title.downcase }
 

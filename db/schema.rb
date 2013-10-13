@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130921080603) do
+ActiveRecord::Schema.define(:version => 20130926140911) do
 
   create_table "courses", :force => true do |t|
     t.string   "title"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(:version => 20130921080603) do
 
   add_index "courses", ["title"], :name => "index_courses_on_title", :unique => true
   add_index "courses", ["user_id"], :name => "index_courses_on_user_id"
+
+  create_table "lessons", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "media_file"
+    t.integer  "course_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "lessons", ["course_id"], :name => "index_lessons_on_course_id"
+  add_index "lessons", ["title"], :name => "index_lessons_on_title", :unique => true
 
   create_table "student_levels", :force => true do |t|
     t.string   "title"

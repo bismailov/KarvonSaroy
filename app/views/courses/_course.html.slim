@@ -1,5 +1,7 @@
 li
   => link_to(course.title.capitalize, course)
+  ' | #{course.subject.title.capitalize}
+  ' | #{course.student_level.title.capitalize}
   - if current_user.admin?
     ' |   
     => link_to t('ui.edit'), edit_course_path(course)

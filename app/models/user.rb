@@ -15,7 +15,7 @@
 
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :surname, :password, :password_confirmation
-  attr_protected :admin, :editor, :role
+  attr_protected :role #:admin, :editor, 
   has_secure_password
 
   ROLES = %w[admin moderator editor author banned] << nil

@@ -23,8 +23,7 @@ FactoryGirl.define do
     end
 
   end
-
-
+ 
   factory :course do
     sequence(:title) { |n| "Title #{n}" }
     sequence(:objectives) { |n| "Objectives #{n}" }
@@ -33,7 +32,6 @@ FactoryGirl.define do
     student_level_id 1
   end
 
-
   factory :subject do
     title "French for Adults"
   end
@@ -41,5 +39,7 @@ FactoryGirl.define do
   factory :student_level do
     title "Advanced"
   end
+
+
 
 end
