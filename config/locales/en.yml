@@ -40,6 +40,10 @@ en:
       course:
         title: title
         objectives: objectives
+      lesson:
+        title: title
+        content: content
+        media_file: media file
   messages:
     error_on_form: 
       one: The form contains %{count} error
@@ -90,6 +94,9 @@ en:
     all_courses: All courses 
     new_course: Add new course
     edit_course: Edit course
+    all_lessons: All lessons
+    new_lesson: Add new lesson
+    edit_lesson: Edit lesson
     delete: delete
     edit: edit
     back: back

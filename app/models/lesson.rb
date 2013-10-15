@@ -23,6 +23,7 @@ class Lesson < ActiveRecord::Base
   validates :course_id, presence: true
   validates :title, presence: true, length: {maximum: 250}, uniqueness: {case_sensitive: false}
   validates :content, presence: true
+  validates :media_file, length: {maximum: 250}
 end
 
 # look at models/subject.rb for index generation

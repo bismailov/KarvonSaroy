@@ -40,6 +40,10 @@ uzlt:
       course:
         title: Kurs nomi
         objectives: Kurs haqida ma'lumot
+      lesson:
+        title: Dars nomi
+        content: Dars mazmuni
+        media_file: Video fayl
   messages:
     error_on_form:
       one: Formada %{count} dona xato mavjud
@@ -90,6 +94,9 @@ uzlt:
     all_courses: Barcha kurslar 
     new_course: Yangi kurs qo'shish
     edit_course: Kursni tahrirlash
+    all_lessons: Barcha darslar 
+    new_lesson: Yangi dars qo'shish
+    edit_lesson: Darsni tahrirlash 
     delete: o'chirish (delete)
     edit: tahrirlash (edit)
     back: orqaga

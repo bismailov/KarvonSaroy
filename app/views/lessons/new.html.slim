@@ -1,0 +1,12 @@
+- provide(:title, t('ui.new_lessons'))
+h1 = t('ui.new_lesson')
+.row
+  .span6.offset3
+    = form_for([@course, @lesson]) do |f|
+      
+      = render 'fields', f: f
+
+      = f.submit t("ui.new_lesson"), class: "btn btn-large btn-primary"
+      <br/>                               
+      <br/>                               
+      = link_to t("ui.back"), course_lessons_path

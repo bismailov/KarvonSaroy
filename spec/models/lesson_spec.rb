@@ -34,6 +34,46 @@ describe Lesson do
     it { should_not be_valid } 
   end
 
+  describe "when title is not present" do
+    before { @lesson.title = nil }
+    it { should_not be_valid } 
+  end
+
+  describe "when content is not present" do
+    before { @lesson.content = nil }
+    it { should_not be_valid } 
+  end
+
+  describe "when title is too long" do
+    before { @lesson.title = 'a' * 251 }
+    it { should_not be_valid }
+  end
+
+  describe "when media_file is too long" do
+    before { @lesson.media_file = 'a' * 251 }
+    it { should_not be_valid }
+  end
+
+  describe "when title is already taken case insensitive" do
+    before do
+      lesson_with_same_title = @lesson.dup
+      lesson_with_same_title.title = @lesson.title.upcase
+      lesson_with_same_title.save
+    end
+
+    it { should_not be_valid}
+  end
+
+  describe "when title is already taken" do
+    before do
+      lesson_with_same_title = @lesson.dup
+      lesson_with_same_title.save
+    end
+
+    it { should_not be_valid}
+  end
+
+
 
 
 end

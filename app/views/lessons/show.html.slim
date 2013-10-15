@@ -1,0 +1,15 @@
+- provide(:title, @lesson.title)
+
+.row
+  aside.span4
+    section
+      h1 = @lesson.title.capitalize
+
+
+      => link_to t('ui.edit'), edit_course_lesson_path(@course, @lesson)
+      '|
+      = link_to t('ui.back'), course_lessons_path
+      <br/>
+
+      = @lesson.content
+
