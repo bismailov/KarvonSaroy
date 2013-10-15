@@ -3,7 +3,8 @@
 # seach for 'The final Gemfile for the sample application'
 
 
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'pg', '0.15.1'
@@ -12,6 +13,8 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
+
+gem 'bootstrap-wysihtml5-rails', '0.3.1.23'
 
 gem 'faker', '1.1.2'
 

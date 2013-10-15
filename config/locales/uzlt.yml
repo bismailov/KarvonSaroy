@@ -102,6 +102,7 @@ uzlt:
     back: orqaga
     administration: Boshqaruv menusi
     course_author: Kurs muallifi
+    lessons_count: Darslar soni
   will_paginate:
     next_label: keyingi sahifa
     previous_label: oldingi sahifa

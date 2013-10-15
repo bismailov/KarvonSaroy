@@ -11,6 +11,7 @@ class CoursesController < ApplicationController
   #GET /courses/1
   def show
     @course = Course.find(params[:id])
+    @lessons = @course.lessons.paginate(page: params[:page])
   end
 
   #GET /courses/new

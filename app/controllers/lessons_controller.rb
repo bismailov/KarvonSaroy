@@ -13,7 +13,8 @@ class LessonsController < ApplicationController
   #GET /courses/:course_id/lessons
   def index
     # @lessons = Course.all
-    @lessons = @course.lessons.paginate(page: params[:page] )
+    # @lessons = @course.lessons.paginate(page: params[:page] )
+    redirect_to @course
   end
 
   #GET /courses/:course_id/lessons/:id

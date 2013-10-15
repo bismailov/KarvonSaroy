@@ -26,3 +26,15 @@
 
       h4 = t('activerecord.attributes.course.objectives')
       = @course.objectives
+
+<br/>  
+
+= link_to  t('ui.new_lesson'), new_course_lesson_path(@course), class: "btn btn-large btn-primary"
+<br/>  
+
+- if @course.lessons.any?
+  h4 #{t("ui.lessons_count")}: #{@course.lessons.count}
+  ol.numbered
+    = render @lessons
+
+  = will_paginate @lessons
