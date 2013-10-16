@@ -1,7 +1,7 @@
 - provide(:title, t('ui.edit_lesson'))
 h1 = t('ui.edit_lesson')
 .row
-  .span6.offset3
+  .span8.offset2
     = form_for([@course, @lesson]) do |f|
       
       = render 'fields', f: f

@@ -1,10 +1,15 @@
 li
   => link_to(course.title.capitalize, course)
-  ' | #{t("ui.lessons_count")}: #{course.lessons.count}
-  ' | #{course.subject.title.capitalize}
-  ' | #{course.student_level.title.capitalize}
+  /*' | #{t("ui.lessons_count")}: #{course.lessons.count}*/
+  |&nbsp;&nbsp;&nbsp;
+  '(#{course.lessons.count})
+  br
+  '#{course.subject.title.capitalize}
+  |&nbsp;&nbsp;&nbsp;
+  '#{course.student_level.title.capitalize}
   - if current_user && current_user.admin?
-    ' |   
+    |&nbsp;&nbsp;&nbsp;
+    /*' |   */
     /*=> link_to t('ui.edit'), edit_course_path(course)*/
     => link_to '', edit_course_path(course), class:'icon-edit'
     /*'|*/

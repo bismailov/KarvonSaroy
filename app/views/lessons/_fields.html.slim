@@ -4,7 +4,14 @@
 = f.text_field :title
 
 = f.label :content, t("activerecord.attributes.lesson.content")
-= f.text_area :content, cols: 40, rows: 15
+= f.text_area :content, cols: 60, rows: 15, class: "wysihtml5"
 
 = f.label :media_file, t("activerecord.attributes.lesson.media_file")
 = f.text_field :media_file
+
+javascript:
+  $(document).ready(function(){
+    $('.wysihtml5').each(function(i, elem) {
+      $(elem).wysihtml5();
+      });
+          })

@@ -1,35 +1,52 @@
 - provide(:title, @course.title)
 
+/*<ul class="breadcrumb">*/
+  /*<li><a href="#">Home</a> <span class="divider">/</span></li>*/
+    /*<li><a href="#">Library</a> <span class="divider">/</span></li>*/
+      /*<li class="active">Data</li>*/
+      /*</ul>*/
+
+ul.breadcrumb
+  li = link_to @course.subject.title.humanize, subjects_path
+  li 
+    span.divider
+      '/
+  li = link_to @course.student_level.title.humanize, student_levels_path
+
 .row
-  aside.span4
+  aside.span6
     section
       h1 = @course.title.capitalize
 
       => link_to t('ui.edit'), edit_course_path(@course)
-      '|
+      /*'|*/
+      |&nbsp;&nbsp;&nbsp;
       => link_to t('ui.back'), courses_path
 
-      p
-        b = t('activerecord.attributes.subject.title')
-        |:&nbsp;
-        = @course.subject.title
+      /*p*/
+        /*b = t('activerecord.attributes.subject.title')*/
+        /*|:&nbsp;*/
+        /*= @course.subject.title*/
 
-        br 
-        b = t('activerecord.attributes.student_level.title')
-        |:&nbsp;
-        = @course.student_level.title
+        /*br */
+        /*b = t('activerecord.attributes.student_level.title')*/
+        /*|:&nbsp;*/
+        /*= @course.student_level.title*/
 
-        br 
-        b = t('ui.course_author')
-        |:&nbsp;
-        = link_to @course.user.name + " " + @course.user.surname, @course.user
+        /*br */
+        /*b = t('ui.course_author')*/
+        /*|:&nbsp;*/
+      /*'|*/
+      |&nbsp;&nbsp;&nbsp;
+      = link_to @course.user.name + " " + @course.user.surname, @course.user
 
-      h4 = t('activerecord.attributes.course.objectives')
+      /*h4 = t('activerecord.attributes.course.objectives')*/
+      br
+      br
       = @course.objectives
 
 <br/>  
-
-= link_to  t('ui.new_lesson'), new_course_lesson_path(@course), class: "btn btn-large btn-primary"
+= link_to  t('ui.new_lesson'), new_course_lesson_path(@course), class: "btn btn-default btn-primary"
 <br/>  
 
 - if @course.lessons.any?

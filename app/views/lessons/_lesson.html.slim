@@ -1,7 +1,7 @@
 li
   => link_to( lesson.title.capitalize, [@course, lesson] )
   - if current_user and current_user.admin?
-    ' |   
-    => link_to t('ui.edit'), edit_course_lesson_path(@course, lesson)
-    '|
-    = link_to t('ui.delete'), [@course, lesson], method: :delete, data: { confirm: t("messages.are_you_sure") }
+    |&nbsp;&nbsp;&nbsp;
+    => link_to '', edit_course_lesson_path(@course, lesson), class:'icon-edit'
+    |&nbsp;
+    = link_to '', [@course, lesson], method: :delete, data: { confirm: t("messages.are_you_sure") }, class:'icon-remove'

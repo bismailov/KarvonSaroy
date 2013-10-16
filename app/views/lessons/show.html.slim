@@ -1,7 +1,18 @@
 - provide(:title, @lesson.title)
 
+ul.breadcrumb
+  li = @course.subject.title.humanize
+  li 
+    span.divider
+      '/
+  li = @course.student_level.title.humanize
+  li 
+    span.divider
+      '/
+  li = link_to @course.title.humanize, @course
+
 .row
-  aside.span4
+  aside.span8
     section
       h1 = @lesson.title.capitalize
 
@@ -9,7 +20,12 @@
       => link_to t('ui.edit'), edit_course_lesson_path(@course, @lesson)
       '|
       = link_to t('ui.back'), course_lessons_path
-      <br/>
-
-      = @lesson.content
+      = jwplayer_assets
+      br
+      br
+      /*= jwplayer({width: 500, height: 200, file:@lesson.media_file})*/
+      = jwplayer({file:@lesson.media_file})
+      br
+      br
+      == @lesson.content
 
