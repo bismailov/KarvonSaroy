@@ -9,7 +9,7 @@ header.navbar.navbar-fixed-top
           - if signed_in?
             li = link_to t("ui.users"), users_path 
 
-            - if current_user.admin?
+            - if current_user and current_user.admin?
               li#fat-menu.dropdown 
                 a[href="#" class="dropdown-toggle" data-toggle="dropdown"] #{t("ui.administration")} <b class=caret></b>
                 ul.dropdown-menu

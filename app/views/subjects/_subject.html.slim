@@ -1,6 +1,6 @@
 li
   => link_to(subject.title.capitalize, subject)
-  - if current_user.admin?
+  - if current_user and current_user.admin?
     ' |   
     => link_to t('ui.edit'), edit_subject_path(subject)
     '|

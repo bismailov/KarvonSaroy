@@ -1,6 +1,6 @@
 li
   => link_to(student_level.title.capitalize, student_level)
-  - if current_user.admin?
+  - if current_user and current_user.admin?
     ' |   
     => link_to t('ui.edit'), edit_student_level_path(student_level)
     '|

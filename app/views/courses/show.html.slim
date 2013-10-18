@@ -1,11 +1,5 @@
 - provide(:title, @course.title)
 
-/*<ul class="breadcrumb">*/
-  /*<li><a href="#">Home</a> <span class="divider">/</span></li>*/
-    /*<li><a href="#">Library</a> <span class="divider">/</span></li>*/
-      /*<li class="active">Data</li>*/
-      /*</ul>*/
-
 ul.breadcrumb
   li = link_to @course.subject.title.humanize, subjects_path
   li 
@@ -44,14 +38,15 @@ ul.breadcrumb
       br
       br
       = @course.objectives
+  
+  main.span5
+    br
+    = link_to  t('ui.new_lesson'), new_course_lesson_path(@course), class: "btn btn-default btn-primary"
+    br
+    br
+    p #{t("ui.lessons_count")}: #{@course.lessons.count}
+    - if @course.lessons.any?
+      ol.numbered
+        = render @lessons
 
-<br/>  
-= link_to  t('ui.new_lesson'), new_course_lesson_path(@course), class: "btn btn-default btn-primary"
-<br/>  
-
-- if @course.lessons.any?
-  h4 #{t("ui.lessons_count")}: #{@course.lessons.count}
-  ol.numbered
-    = render @lessons
-
-  = will_paginate @lessons
+    = will_paginate @lessons
