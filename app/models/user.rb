@@ -39,6 +39,7 @@ class User < ActiveRecord::Base
     return 'admin' == self.role
   end
 
+  #used for sessions
   private
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
