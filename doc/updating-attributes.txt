@@ -1,0 +1,20 @@
+Use toggle! :page 511, Ruby on Rails Tutorial, Hartl.
+Also, look at http://www.davidverhasselt.com/2011/06/28/5-ways-to-set-attributes-in-activerecord/
+(there is a saved copy pdf in KarvonSaroy/doc)
+
+In rails c (console) be careful with searches:
+
+
+1.9.3-p429 :030 > User.where(email:"admin@gmail.com").class
+ => ActiveRecord::Relation
+ 
+So here we can't assign attributes.
+
+Use find_by_* or User.all, they return User class object.
+
+Method	Uses Default Accessor	Mass Assignment Protection	Saved to Database	Validations
+attribute=	Yes	No	No	n/a
+write_attribute	No	No	No	n/a
+update_attribute	Yes	No	Yes	No
+attributes=	Yes	Yes ((Mass Assignment Protection for attributes= is overridable.))	No	n/a
+update_attributes	Yes	Yes	Yes	Yes

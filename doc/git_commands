@@ -1,0 +1,41 @@
+Git GUIs
+========
+
+gitk
+git-cola
+gitx for Macs
+
+Branching and etc
+======================
+
+git checkout -b branch_name
+git add .
+git commit -m "Finish sign in"
+git checkout master
+git merge branch_name
+
+
+
+BitBucket.org commands
+=======================
+
+Make changes and push
+Every project needs a README file. Your README appears on the project Overview page and introduces your project.
+
+echo "# This is my README" >> README.md
+git add README.md
+git commit -m "First commit. Adding a README."
+git push -u origin master
+
+Heroku commands
+=====================
+
+gem install heroku
+heroku keys:add
+heroku create --stack cedar
+git push heroku master
+heroku run rake db:migrate --app shielded-taiga-8538
+heroku open #to open the app address in a browser
+git config -l #viewing configs
+git config remote.heroku.url git@heroku.com:shielded-taiga-8538.git #updating heroku links
+

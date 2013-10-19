@@ -1,0 +1,7 @@
+edit app/models/user.rb
+create migration; db:migrate
+edit spec/model/user_tests and spec_request/user_tests
+edit spec/factories.rb -- add user type in factories
+edit app/helpers/session_helper.rb: add role specific functions
+edit roles and permissions
+edit views; add specific menus

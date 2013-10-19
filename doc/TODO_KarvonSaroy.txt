@@ -1,0 +1,15 @@
+File contains todo items needed to be fixed
+
+Users index page is visible to all signed in users,
+need to change it, protect it and made available only to admins.
+Look at around page 494
+
+2013-09-26
+Add edit pages for roles.
+
+DONE, just added wysihtml5. Markdown for objectives
+
+Add video duration along an item in a list of lessons.
+
+
+

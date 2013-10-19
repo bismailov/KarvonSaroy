@@ -8,7 +8,7 @@ KarvonSaroy::Application.routes.draw do
   resources :subjects
   resources :student_levels
   resources :courses do
-    resources :lessons #, shallow: true
+    resources :lessons 
   end
 
   root :to => 'static_pages#home'
