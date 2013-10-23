@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130926140911) do
+ActiveRecord::Schema.define(:version => 20131022082537) do
 
   create_table "courses", :force => true do |t|
     t.string   "title"
@@ -31,8 +31,12 @@ ActiveRecord::Schema.define(:version => 20130926140911) do
     t.text     "content"
     t.string   "media_file"
     t.integer  "course_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.string   "video_attachment_file_name"
+    t.string   "video_attachment_content_type"
+    t.integer  "video_attachment_file_size"
+    t.datetime "video_attachment_updated_at"
   end
 
   add_index "lessons", ["course_id"], :name => "index_lessons_on_course_id"

@@ -2,13 +2,17 @@
 #
 # Table name: lessons
 #
-#  id         :integer          not null, primary key
-#  title      :string(255)
-#  content    :text
-#  media_file :string(255)
-#  course_id  :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                            :integer          not null, primary key
+#  title                         :string(255)
+#  content                       :text
+#  media_file                    :string(255)
+#  course_id                     :integer
+#  created_at                    :datetime         not null
+#  updated_at                    :datetime         not null
+#  video_attachment_file_name    :string(255)
+#  video_attachment_content_type :string(255)
+#  video_attachment_file_size    :integer
+#  video_attachment_updated_at   :datetime
 #
 
 require 'spec_helper'

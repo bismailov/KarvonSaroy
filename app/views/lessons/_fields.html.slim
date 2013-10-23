@@ -6,8 +6,18 @@
 = f.label :content, t("activerecord.attributes.lesson.content")
 = f.text_area :content, cols: 60, rows: 15, class: "wysihtml5"
 
-= f.label :media_file, t("activerecord.attributes.lesson.media_file")
-= f.text_field :media_file
+= f.label :media_file, t("activerecord.attributes.lesson.media_file") 
+p = @lesson.media_file 
+/*= f.text_field :media_file*/
+
+= f.label :video_attachment, t("activerecord.attributes.lesson.video_attachment")
+= f.file_field  :video_attachment
+
+
+- if @lesson.video_attachment.to_s.split('?')[0] != '/video_attachments/original/missing.png'
+  = @lesson.video_attachment.to_s.split('?')[0]
+
+br
 
 javascript:
   $(document).ready(function(){

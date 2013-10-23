@@ -6,7 +6,9 @@ h1 = t('ui.new_lesson')
       
       = render 'fields', f: f
 
-      = f.submit t("ui.new_lesson"), class: "btn btn-large btn-primary"
+      br
+
+      = f.submit t("ui.new_lesson"), class: "btn btn-medium btn-primary"
       <br/>                               
       <br/>                               
       = link_to t("ui.back"), course_lessons_path
