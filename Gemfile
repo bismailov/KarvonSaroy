@@ -16,6 +16,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 
 gem 'bootstrap-wysihtml5-rails', '0.3.1.23'
 gem 'jwplayer-rails', '1.0.1'
+gem 'paperclip', '3.5.1'
 
 gem 'faker', '1.1.2'
 

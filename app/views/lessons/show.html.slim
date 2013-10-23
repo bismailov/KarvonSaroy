@@ -24,7 +24,8 @@ ul.breadcrumb
       br
       br
       /*= jwplayer({width: 500, height: 200, file:@lesson.media_file})*/
-      = jwplayer({file:@lesson.media_file})
+      /*= jwplayer({file:@lesson.media_file})*/
+      = jwplayer({file:@lesson.video_attachment.to_s.split('?')[0]})
       br
       br
       == @lesson.content

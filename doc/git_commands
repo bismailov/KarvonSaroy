@@ -39,3 +39,6 @@ heroku open #to open the app address in a browser
 git config -l #viewing configs
 git config remote.heroku.url git@heroku.com:shielded-taiga-8538.git #updating heroku links
 
+=======================
+
+You can check what untracked files are hitting your exclude patterns with git ls-files -io --exclude-standard, for tracked files it'd be -ic not -io

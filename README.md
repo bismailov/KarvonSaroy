@@ -1,3 +1,7 @@
-# KarvonSaroy.uz til o'rgatish kurslari lo'yihasi
-2013 yil iyunda boshlandi.
+# KarvonSaroy.uz -- learning platform 
+This is a web application for a simple online learning platform
+
+Commenced on June, 2013.  
 bobir@ismoilov.com
+
+
