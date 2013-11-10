@@ -11,4 +11,4 @@ h1 = t('ui.edit_lesson')
       = f.submit t("ui.edit_lesson"), class: "btn btn-medium btn-primary"
       <br/>                               
       <br/>                               
-      = link_to t("ui.back"), course_lessons_path
+      = link_to t("ui.back"), course_lesson_path(@course, @lesson)

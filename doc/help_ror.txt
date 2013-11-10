@@ -1,0 +1,72 @@
+Include gems version info in Gemfile p.37 RoR Tutorial by Hartl
+(Also look at p.69)
+
+Put application under version control system, Git.
+---------------------------
+
+Since we’re about to add the ability to create new users through the web,
+let’s remove the user created at the console in Section 6.3.5. The cleanest way
+to do this is to reset the database with the db:reset Rake task:
+
+$ bundle exec rake db:reset
+-----
+
+To reset test database
+$ bundle exec rake db:test:prepare
+
+-----
+
+# To include version of Rake in our Gemfile, use bundle exec on before rake
+# p. 73-74
+bundle exec rake db:migrate
+
+
+If you get error -- most of the tests fail, -- 
+rake db:migrate
+rake db:test:prepare
+
+
+----------------------------
+
+
+# while on some secondary branch
+git add . 
+git commit -m "xxx"
+# change to master branch
+git checkout master
+git merge static-pages
+# update GitHub
+git push
+# deploy to Heroku
+git push heroku
+
+-----------------------------
+setting postgres for dev:
+http://stackoverflow.com/questions/11092807/installing-postgresql-on-ubuntu-for-ruby-on-rails
+-----------------------------
+
+Look at the end of 6th chapter; there is debugging info in development environment added.
+
+What is presenter? 2nd best practices video.
+
+Bullet gem to check if we run N+1 queries (slow ones).
+------------------------------
+RoR internationalization: 
+  http://ruby-i18n.org/wiki
+  http://guides.rubyonrails.org/i18n.html
+------------------------------
+RoR Rspec and Capybara integration:
+_append_ following at the end of spec_helper.rb
+
+module ::RSpec::Core
+  class ExampleGroup
+    include Capybara::DSL
+    include Capybara::RSpecMatchers
+  end
+end
+------------------------------
+After changing DB scheme by running migration, reestablish test database as well:
+bundle exec rake db:test:prepare
+------------------------------
+
+

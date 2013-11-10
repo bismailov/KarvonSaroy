@@ -16,9 +16,10 @@ ul.breadcrumb
     section
       h1 = @lesson.title.capitalize
 
-
-      => link_to t('ui.edit'), edit_course_lesson_path(@course, @lesson)
-      '|
+      - if current_user
+        -if current_user.role == 'admin' or current_user.role == 'editor' or current_user.role == 'author'
+          => link_to t('ui.edit'), edit_course_lesson_path(@course, @lesson)
+          '|
       = link_to t('ui.back'), course_lessons_path
       = jwplayer_assets
       br

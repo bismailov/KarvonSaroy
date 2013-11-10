@@ -1,0 +1,156 @@
+Users index page is visible to all signed in users.
+------------------
+tags: guest
+need to change it, protect it and made available only to admins.
+Look at around page 494
+
+
+Add edit pages for roles.
+-----------------
+tags: advanced optional
+
+Add video duration along an item in a list of lessons.
+-------------------
+tags: guest
+
+Add registration or login form on front page
+-------------------
+tags: guest
+
+Remove rails logo from frontpage
+-------------------
+tags: guest
+
+Add some text on fp
+-------------------
+tags: guest
+
+Add logo/site name on fp
+------
+tags: guest
+
+Change email address and copyright
+------
+tags: guest
+
+Remove debug info in footer
+------
+tags: guest
+
+Expand /about page
+------
+tags:guest
+
+Take notes from design document for fp
+--------
+tags:guest
+
+Add description to student_levels
+-------
+tags: guest optional
+
+How many words and etc
+
+Remove add student_levels button from unsigned user
+-------
+tags:guest
+
+"Yangi o'quvchi darajasini qo'shish"
+/student_levels
+
+
+Remove add subjects button from unsigned user
+-------
+tags:guest
+
+"Yangi predmet qo'shish"
+/subjects
+
+Remove edit from student_levels/1
+--------
+tags:guest
+
+Remove edit from subjects/1
+--------
+tags:guest
+
+Remove add course from unsigned user
+-------
+tags:guest
+
+Remove edit course from unsigned user
+---------
+tags:guest
+
+/courses/1
+
+Ban regular user from viewing users
+--------
+tags:student
+
+User lists, /users/
+User profile, /users/1
+Author name on /courses/1
+Users link on header
+
+Remove add lectures button for unsigned
+-------
+tags:guest
+
+/courses/1
+
+Remove add lectures button for student
+-------
+tags:student
+
+/courses/1
+
+Close lessons for guests
+-------
+tags:guest
+
+Add lessons listing on a lesson page
+-------------
+tags:student
+
+Also, there should be some kind of progress indicator, which lesson is current.
+
+Add next/prev lesson links on a lesson page
+--------
+tags:student
+
+Test video playback
+-----------
+tags:student
+
+Summary page or link on /courses/1 for course vocabulary
+--------
+tags:student
+
+Vocabulary is divided among lessons. But it would be convenient
+to have a summary list for all included words in a course.
+
+Maybe a separate field or regular expression.
+
+Sort /courses page
+--------
+tags:student
+
+First by subject, then by student level.
+
+Add management menu to author and editor
+--------
+tags:editor author
+
+The menu on the top of the page, like admin has.
+
+Add pretty formatting to edit box for courses
+---------
+tags:editor
+
+Redesign for inclusion of author in workflow
+----------
+tags: advanced author editor optional
+
+There should be "published" property for at least courses.
+Look at 09 Nov. 2013 note in COSCOM notebook.
