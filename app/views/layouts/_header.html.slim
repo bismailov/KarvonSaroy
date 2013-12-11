@@ -1,15 +1,21 @@
 header.navbar.navbar-fixed-top
   .navbar-inner
     .container
-      = link_to "KarvonSaroy.uz", root_path, id: "logo"
+      = link_to KarvonSaroy::Application.config.APP_NAME, root_path, id: "logo"
+      /*= link_to 'Elif.uz', root_path, id: "logo"*/
       nav
         ul.nav.pull-right
           li = link_to t("ui.home"), root_path
           li = link_to t("ui.about"), about_path 
+          /*- if current_user and current_user. */
+            /*li testing authorized*/
           - if signed_in?
-            li = link_to t("ui.users"), users_path 
+            - if ["admin", "editor", "author"].include?(current_user.role)                                
+              li = link_to t("ui.users"), users_path 
 
-            - if current_user and current_user.admin?
+            /*- if current_user and ('admin' == current_user.role or 'editor' == current_user.role or 'author' == current_user.role)*/
+            - if ["admin", "editor", "author"].include?(current_user.role)
+
               li#fat-menu.dropdown 
                 a[href="#" class="dropdown-toggle" data-toggle="dropdown"] #{t("ui.administration")} <b class=caret></b>
                 ul.dropdown-menu
@@ -31,4 +37,4 @@ header.navbar.navbar-fixed-top
                   li.divider
                   li = link_to t("messages.session.sign_out"), signout_path, method: "delete"
           - else
-            li = link_to t("messages.session.sign_in"), signin_path 
+            li = link_to t("messages.session.sign_in"), signin_path

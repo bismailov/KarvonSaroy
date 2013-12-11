@@ -7,7 +7,7 @@ li
   '#{course.subject.title.capitalize}
   |&nbsp;&nbsp;&nbsp;
   '#{course.student_level.title.capitalize}
-  - if current_user && current_user.admin?
+  - if current_user and ('admin' == current_user.role or 'editor' == current_user.role)
     |&nbsp;&nbsp;&nbsp;
     /*' |   */
     /*=> link_to t('ui.edit'), edit_course_path(course)*/

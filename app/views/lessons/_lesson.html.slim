@@ -1,6 +1,6 @@
 li
   => link_to( lesson.title.capitalize, [@course, lesson] )
-  - if current_user and current_user.admin?
+  - if current_user and ('admin' == current_user.role or 'editor' == current_user.role)
     |&nbsp;&nbsp;&nbsp;
     => link_to '', edit_course_lesson_path(@course, lesson), class:'icon-edit'
     |&nbsp;

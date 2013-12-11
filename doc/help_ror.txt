@@ -69,4 +69,7 @@ After changing DB scheme by running migration, reestablish test database as well
 bundle exec rake db:test:prepare
 ------------------------------
 
+2013-12-111
 
+There is a file to contain global constants:
+config/initializers/my_initializers.rb

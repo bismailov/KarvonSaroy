@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131022082537) do
+ActiveRecord::Schema.define(:version => 20131211145913) do
 
   create_table "courses", :force => true do |t|
     t.string   "title"
@@ -44,8 +44,9 @@ ActiveRecord::Schema.define(:version => 20131022082537) do
 
   create_table "student_levels", :force => true do |t|
     t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "description"
   end
 
   add_index "student_levels", ["title"], :name => "index_student_levels_on_title", :unique => true

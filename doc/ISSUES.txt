@@ -1,41 +1,14 @@
-Users index page is visible to all signed in users.
-------------------
-tags: guest
-need to change it, protect it and made available only to admins.
-Look at around page 494
-
+Fix tests
+------------
 
 Add edit pages for roles.
 -----------------
 tags: advanced optional
 
-Add video duration along an item in a list of lessons.
--------------------
-tags: guest
-
-Add registration or login form on front page
--------------------
-tags: guest
-
-Remove rails logo from frontpage
--------------------
-tags: guest
-
-Add some text on fp
--------------------
-tags: guest
-
 Add logo/site name on fp
 ------
 tags: guest
 
-Change email address and copyright
-------
-tags: guest
-
-Remove debug info in footer
-------
-tags: guest
 
 Expand /about page
 ------
@@ -44,20 +17,6 @@ tags:guest
 Take notes from design document for fp
 --------
 tags:guest
-
-Add description to student_levels
--------
-tags: guest optional
-
-How many words and etc
-
-Remove add student_levels button from unsigned user
--------
-tags:guest
-
-"Yangi o'quvchi darajasini qo'shish"
-/student_levels
-
 
 Remove add subjects button from unsigned user
 -------
@@ -154,3 +113,69 @@ tags: advanced author editor optional
 
 There should be "published" property for at least courses.
 Look at 09 Nov. 2013 note in COSCOM notebook.
+
+Fill user profile page
+---------
+tags: student
+
+Chosen courses, completed courses, progress, activity report, contact information, 
+registration date.  
+
+Add email validation
+-------
+tags:student
+
+Add phone number validation
+-----------
+tags:student optional advanced
+
+Check landing pages after login/logout
+--------
+tags: student
+
+index pages for logged in users
+----------
+tags: student
+
+DONE Users index page is visible to all signed in users.
+------------------
+tags: guest
+need to change it, protect it and made available only to admins.
+Look at around page 494
+
+DONE Grep for KarvonSaroy in source
+---------
+tags:guest
+
+DONE Add registration or login form on front page
+-------------------
+tags: guest
+
+DONE Remove rails logo from frontpage
+-------------------
+tags: guest
+
+DONE Add some text on fp
+-------------------
+tags: guest
+
+DONE Change email address and copyright
+------
+tags: guest
+
+DONE Remove add student_levels button from unsigned user
+-------
+tags:guest
+
+"Yangi o'quvchi darajasini qo'shish"
+/student_levels
+
+DONE Add description to student_levels
+-------
+tags: guest optional
+
+How many words and etc
+
+LATER Add video duration along an item in a list of lessons.
+-------------------
+tags: guest

@@ -1,15 +1,14 @@
 footer.footer
   small  
-    /*'©KarvonSaroy.uz 2013     */
-    /*a href='mailto:info@karvonsaroy.uz' info@karvonsaroy.uz*/
-    '©
-    a> href='mailto:info@karvonsaroy.uz' KarvonSaroy.uz,
-    '2013
+    /*'©Elif.uz 2013     */
+    '© 2013,
+    a> href='mailto:info@elif.uz' = KarvonSaroy::Application.config.APP_NAME
     
   nav
     ul
-      - if current_user != nil
-        li #{current_user.role}
+      /*- if current_user != nil*/
+        /*li #{current_user.role}*/
+      li = current_user.try(:role)
       li = link_to t("ui.home"), root_path
       li = link_to t("ui.about"), about_path
       /*li = link_to "Blog", "#" */

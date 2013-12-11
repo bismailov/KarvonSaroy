@@ -1,9 +1,30 @@
 - provide(:title, "Home")
-.center.hero-unit
-  h1 English for Children
+
+- unless signed_in?
+
+  /*.center.hero-unit*/
+  .row
+    .span7
+      .hero-unit
+        h3 Bolalarga ingliz tili video darslari!
   
-  p KarvonSaroy.uz saytiga xush kelibsiz! Bu yerda bolalar uchun ingliz tilidan turli darslar topishingiz mumkin.
+        p #{KarvonSaroy::Application.config.APP_NAME} saytiga xush kelibsiz! 
+          Saytimizda ingliz tili bo'yicha boshlang'ich video darlarini topishingiz mumkin.       
 
-  = link_to "Ro'yxatdan o'tish", signup_path, class: "btn btn-large btn-primary"
+        p O'qishni boshlash uchun ro'yxatdan o'ting >
 
-= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/'
+        p Ushbu sayt qisqa va qulay video darslar yordamiza kichkintoylarga 
+          inglizcha so'zlarni va iboralarni o'rgatadi. 
+
+
+        /*= link_to "Ro'yxatdan o'tish", 
+         * signup_path, class: "btn btn-large btn-primary"*/
+
+    .span3.offset1
+      = form_for(@user) do |f|
+      
+        = render 'users/fields', f: f
+
+        p = f.submit t("messages.register_me"), 
+          class: "btn btn-large btn-primary"
+        p.center Yoki &nbsp; #{link_to t("messages.session.sign_in").downcase, signin_path, class:"btn btn-medium"} 

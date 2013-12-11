@@ -35,10 +35,6 @@ class User < ActiveRecord::Base
 
   default_scope order: 'users.surname ASC'
 
-  def admin?
-    return 'admin' == self.role
-  end
-
   #used for sessions
   private
     def create_remember_token

@@ -2,10 +2,11 @@
 #
 # Table name: student_levels
 #
-#  id         :integer          not null, primary key
-#  title      :string(255)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  title       :string(255)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  description :text
 #
 
 require 'spec_helper'

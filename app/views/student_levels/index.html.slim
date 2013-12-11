@@ -1,7 +1,10 @@
 - provide(:title, t("ui.all_student_levels"))
 h1 = t("ui.all_student_levels")
 
-= link_to  t('ui.new_student_level'), new_student_level_path, class: "btn btn-large btn-primary"
+- if current_user
+  - if ["admin", "editor"].include?(current_user.role)
+    = link_to  t('ui.new_student_level'), new_student_level_path, class: "btn btn-large btn-primary"
+
 <br/>  
 <br/>  
 

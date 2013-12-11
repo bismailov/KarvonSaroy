@@ -5,3 +5,11 @@ edit spec/factories.rb -- add user type in factories
 edit app/helpers/session_helper.rb: add role specific functions
 edit roles and permissions
 edit views; add specific menus
+
+
+Adding description field to student_levels
+rails generate migration add_description_to_student_levels description:string
+add model file: attr_accessible :title, :description                                                                                      
+
+change string to text
+rails generate migration remove_description_from_student_levels description:string

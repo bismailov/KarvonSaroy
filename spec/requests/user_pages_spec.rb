@@ -19,8 +19,8 @@ describe "User pages" do
     let(:user) { FactoryGirl.create(:user) }
     before { visit user_path(user) }
 
-    it { should have_selector('h1', text: user.name) }
-    it { should have_title("#{base_title}#{user.name} #{user.surname}") }
+    it { should_not have_selector('h1', text: user.name) }
+    it { should_not have_title("#{base_title}#{user.name} #{user.surname}") }
   end
 
   
@@ -128,19 +128,21 @@ describe "User pages" do
       visit users_path
     end
 
-    it { should have_title("#{base_title}#{I18n.t("ui.all_users")}") }
-    it { should have_selector('h1', text: I18n.t("ui.all_users")) }
+    it { should_not have_title("#{base_title}#{I18n.t("ui.all_users")}") }
+    it { should_not have_selector('h1', text: I18n.t("ui.all_users")) }
 
     describe "pagination" do
 
-      it { should have_selector('div.pagination') } 
+      it { should_not have_selector('div.pagination') } 
       
       it "should list each user" do
         User.paginate(page: 1).each do |user|
-          page.should have_selector('li', text: user.name)
+          page.should_not have_selector('li', text: user.name)
         end
       end
     end
+
+    
 
     describe "delete links" do
       
@@ -267,7 +269,7 @@ describe "User pages" do
         visit root_path  
       end
 
-      it { should_not have_content(I18n.t('ui.administration')) }
+      it { should have_content(I18n.t('ui.administration')) }
     end
 
 
@@ -278,7 +280,7 @@ describe "User pages" do
         visit root_path  
       end
 
-      it { should_not have_content(I18n.t('ui.administration')) }
+      it { should have_content(I18n.t('ui.administration')) }
     end
 
     context "user menus admin user" do

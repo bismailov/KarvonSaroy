@@ -40,7 +40,7 @@ describe "Authenticaton" do
 
       it { should have_title("#{base_title}#{user.name}") }
 
-      it { should have_link( I18n.t("ui.users"), href: users_path ) }
+      it { should_not have_link( I18n.t("ui.users"), href: users_path ) }
       it { should have_link( I18n.t("ui.profile"), href: user_path(user) ) }
       it { should have_link( I18n.t("ui.settings"), href: edit_user_path(user) ) }
       # it { should have_link( I18n.t("messages.session.sign_out"), href: signout_path(user) ) }

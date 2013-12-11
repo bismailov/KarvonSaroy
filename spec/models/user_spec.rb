@@ -38,8 +38,12 @@ describe User do
   
 
   it { should be_valid }
-  it { should_not be_admin }
+  # it { should_not be_admin }
   # it { should_not be_editor }
+
+  # describe "role initial valie" do
+    # @user.role should be_empty 
+  # end
 
   describe "when name is not present" do
     before { @user.name = "" } 
@@ -196,17 +200,17 @@ describe User do
       @user.update_attribute(:role, "admin")
     end
 
-    it { should be_admin }
+    it { should be_valid }
   end
 
-  # describe "with editor attribute set to 'true'" do
-    # before do
-      # @user.save!
-      # @user.toggle!(:editor)
-    # end
+  describe "with editor attribute set to 'true'" do
+    before do
+      @user.save!
+      @user.update_attribute(:role, "editor")
+    end
 
-    # it { should be_editor }
-  # end
+    it { should be_valid }
+  end
 
   describe "accessible attributes" do
     it "should not allow access to role" do

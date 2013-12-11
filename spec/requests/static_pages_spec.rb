@@ -8,8 +8,8 @@ describe "Static pages" do
 
   describe "Home page" do
     before { visit root_path }
-    it { should have_content('English for Children') }
-    it { should have_selector('h1', text: 'English for Children') }
+    it { should have_content("O'qishni boshlash uchun ro'yxatdan o'ting >") }
+    it { should have_selector('h3', text: 'Bolalarga ingliz tili video darslari!' ) }
     it { should have_title("#{base_title}Home") }
       # there is a bug in Capybara 2, you can't use have_selector on 'title'
       # attribute:

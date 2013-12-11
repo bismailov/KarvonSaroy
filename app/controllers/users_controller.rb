@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:edit, :update, :index, :destroy]
+  before_filter :signed_in_user, only: [:edit, :update, :index, :destroy, :show]
   before_filter :correct_user, only: [:edit, :update]
-  # before_filter :admin_user, only: :destroy
   before_filter(only: [:destroy]) {|c| c.authorized_for_roles "admin"}
+  before_filter(only: [:index]) {|c| c.authorized_for_roles "admin", "editor", "author"}
+
+  # before_filter :admin_user, only: :destroy
 
   def index
     # @users = User.all
@@ -11,6 +13,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    # redirect_to root_path unless currect_user?(@user)
+
+    if !current_user?(@user) and !["admin", "editor", "author"].include?(current_user.role)
+      redirect_to root_path
+    end
+
   end
 
   def new
@@ -29,8 +37,8 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render 'new'
-    end
   end
+    end
 
   def edit
     # @user = User.find(params[:id])
