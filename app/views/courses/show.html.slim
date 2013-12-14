@@ -12,27 +12,14 @@ ul.breadcrumb
     section
       h1 = @course.title.capitalize
 
-      => link_to t('ui.edit'), edit_course_path(@course)
-      /*'|*/
-      |&nbsp;&nbsp;&nbsp;
       => link_to t('ui.back'), courses_path
 
-      /*p*/
-        /*b = t('activerecord.attributes.subject.title')*/
-        /*|:&nbsp;*/
-        /*= @course.subject.title*/
-
-        /*br */
-        /*b = t('activerecord.attributes.student_level.title')*/
-        /*|:&nbsp;*/
-        /*= @course.student_level.title*/
-
-        /*br */
-        /*b = t('ui.course_author')*/
-        /*|:&nbsp;*/
-      /*'|*/
-      |&nbsp;&nbsp;&nbsp;
-      = link_to @course.user.name + " " + @course.user.surname, @course.user
+      - if ["admin", "editor"].include?( current_user.try(:role) ) 
+        |&nbsp;&nbsp;&nbsp;
+        => link_to t('ui.edit'), edit_course_path(@course)
+      - if ["admin", "editor", "author"].include?( current_user.try(:role) ) 
+        |&nbsp;&nbsp;&nbsp;
+        = link_to @course.user.name + " " + @course.user.surname, @course.user
 
       /*h4 = t('activerecord.attributes.course.objectives')*/
       br
@@ -41,7 +28,8 @@ ul.breadcrumb
   
   main.span5
     br
-    = link_to  t('ui.new_lesson'), new_course_lesson_path(@course), class: "btn btn-default btn-primary"
+    - if ["admin", "editor"].include?( current_user.try(:role) ) 
+      = link_to  t('ui.new_lesson'), new_course_lesson_path(@course), class: "btn btn-default btn-primary"
     br
     br
     p #{t("ui.lessons_count")}: #{@course.lessons.count}

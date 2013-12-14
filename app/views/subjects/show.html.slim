@@ -5,6 +5,7 @@
     section
       h1 = @subject.title.capitalize
 
-      => link_to t('ui.edit'), edit_subject_path(@subject)
-      '|
+      - if ["admin", "editor"].include?( current_user.try(:role) ) 
+        => link_to t('ui.edit'), edit_subject_path(@subject)
+        '|
       = link_to t('ui.back'), subjects_path

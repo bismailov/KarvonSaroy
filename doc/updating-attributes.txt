@@ -10,7 +10,8 @@ In rails c (console) be careful with searches:
  
 So here we can't assign attributes.
 
-Use find_by_* or User.all, they return User class object.
+Use instead User.where(email:"admin@gmail.com").first, we'll get object User,
+or use find_by_* or User.all, they return User class object.
 
 Method	Uses Default Accessor	Mass Assignment Protection	Saved to Database	Validations
 attribute=	Yes	No	No	n/a
@@ -18,3 +19,6 @@ write_attribute	No	No	No	n/a
 update_attribute	Yes	No	Yes	No
 attributes=	Yes	Yes ((Mass Assignment Protection for attributes= is overridable.))	No	n/a
 update_attributes	Yes	Yes	Yes	Yes
+
+Adding admin: in rails c -
+User.last.toggle!(:admin) 

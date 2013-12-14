@@ -16,7 +16,7 @@ require 'spec_helper'
 
 describe Course do
   let (:user) { FactoryGirl.create(:user) }
-  let (:subject_) { FactoryGirl.create(:subject) } # "_" so that to differenciate from subject test directive
+  let (:subject_name) { FactoryGirl.create(:subject) } # "_" so that to differenciate from subject test directive
   let (:student_level) { FactoryGirl.create(:student_level) }
 
   before do
@@ -24,7 +24,7 @@ describe Course do
                          # title: "French for Us", objectives: "Lorem ipsum")
     
     @course = user.courses.build(title: "French", objectives: "lorem")
-    @course.subject = subject_
+    @course.subject = subject_name
     @course.student_level = student_level
   end
 

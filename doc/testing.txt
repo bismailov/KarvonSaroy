@@ -17,4 +17,7 @@ If you're migrating from Capybara 1.x, try:
     end
 
 Details here: http://www.elabs.se/blog/60-introducing-capybara-2-1
-                                                    
+
+------------
+
+http://eggsonbread.com/2010/03/28/my-rspec-best-practices-and-tips/

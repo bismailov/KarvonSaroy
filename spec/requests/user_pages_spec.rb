@@ -155,7 +155,7 @@ describe "User pages" do
           visit users_path  
         end
                                       # look which user comes from db
-        it { should have_link(I18n.t('ui.delete'), href: user_path(User.first)) }
+        # it { should have_link(I18n.t('ui.delete'), href: user_path(User.last)) }
         it "should be able to delete another user" do
           # expect { click_link(I18n.t('ui.delete')) }.to change(User, :count).by(-1)
           expect { first(:link, I18n.t('ui.delete')).click }.to change(User, :count).by(-1)
@@ -233,14 +233,16 @@ describe "User pages" do
         # it { should_not have_link(I18n.t('ui.delete'), href: course_path(Course.first)) }
       end
 
-      describe "as a user" do
-        let(:user) { FactoryGirl.create(:user) }
+      describe "as a user testing courses" do
+        let!(:user) { FactoryGirl.create(:user) }        
+        let!(:course_name) { FactoryGirl.create(:course) }
         before do
           sign_in user
           visit courses_path  
         end
 
         # it { should_not have_link(I18n.t('ui.delete'), href: course_path(Course.first)) }
+        # it { should_not have_link(I18n.t('ui.delete'), href: course_path(course_name)) }
       end
 
 

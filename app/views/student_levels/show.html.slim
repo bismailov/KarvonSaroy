@@ -5,6 +5,7 @@
     section
       h1 = @student_level.title.capitalize
 
-      => link_to t('ui.edit'), edit_student_level_path(@student_level)
-      '|
+      - if ["admin", "editor"].include?( current_user.try(:role) ) 
+        => link_to t('ui.edit'), edit_student_level_path(@student_level)
+        '|
       = link_to t('ui.back'), student_levels_path

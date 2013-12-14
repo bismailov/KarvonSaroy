@@ -51,8 +51,7 @@ db:reset runs db:drop db:setup
 db:migrate:redo runs (db:migrate:down db:migrate:up) or (db:migrate:rollback db:migrate:migrate) depending on the specified migration
 db:migrate:reset runs db:drop db:create db:migrate
 
-Adding admin: in rails c -
-User.last.toggle!(:admin) 
 
-#creating a migration to remove field
-rails generate migration RemoveEditorFromUser editor:boolean
+
+RSPEC test running:
+bundle exec rspec

@@ -14,12 +14,14 @@ ul.breadcrumb
 .row
   aside.span8
     section
+      = link_to "⇦ #{@lesson.previous_lesson.title} ", course_lesson_path(@course, @lesson.previous_lesson) if @lesson.previous_lesson
+      '|
+      = link_to " #{@lesson.next_lesson.title} ⇨", course_lesson_path(@course, @lesson.next_lesson) if @lesson.next_lesson
       h1 = @lesson.title.capitalize
 
-      - if current_user
-        -if current_user.role == 'admin' or current_user.role == 'editor' or current_user.role == 'author'
-          => link_to t('ui.edit'), edit_course_lesson_path(@course, @lesson)
-          '|
+      - if ["admin", "editor"].include?( current_user.try(:role) ) 
+        => link_to t('ui.edit'), edit_course_lesson_path(@course, @lesson)
+        '|
       = link_to t('ui.back'), course_lessons_path
       = jwplayer_assets
       br

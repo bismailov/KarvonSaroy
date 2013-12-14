@@ -1,7 +1,8 @@
 - provide(:title, t("ui.all_courses"))
 h1 = t("ui.all_courses")
 
-= link_to  t('ui.new_course'), new_course_path, class: "btn btn-default btn-primary"
+- if ["admin", "editor"].include?( current_user.try(:role) ) 
+  = link_to  t('ui.new_course'), new_course_path, class: "btn btn-default btn-primary"
 <br/>  
 <br/>  
 

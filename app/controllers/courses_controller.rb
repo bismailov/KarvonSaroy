@@ -1,5 +1,4 @@
 class CoursesController < ApplicationController
-  # before_filter :editor_user, only: [:edit, :update, :destroy] 
     before_filter(only: [:new, :create, :edit, :update, :destroy]) { |c| c.authorized_for_roles("admin", "editor") } 
                  
   #GET /courses

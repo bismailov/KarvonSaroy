@@ -1,7 +1,8 @@
 - provide(:title, t("ui.all_subjects"))
 h1 = t("ui.all_subjects")
 
-= link_to  t('ui.new_subject'), new_subject_path, class: "btn btn-large btn-primary"
+- if ["admin", "editor"].include?( current_user.try(:role) ) 
+  = link_to  t('ui.new_subject'), new_subject_path, class: "btn btn-large btn-primary"
 <br/>  
 <br/>  
 

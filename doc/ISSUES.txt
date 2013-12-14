@@ -1,3 +1,7 @@
+Add index on created_at for lesson model
+-------
+tags: student
+
 Fix tests
 ------------
 
@@ -18,55 +22,9 @@ Take notes from design document for fp
 --------
 tags:guest
 
-Remove add subjects button from unsigned user
--------
-tags:guest
 
 "Yangi predmet qo'shish"
 /subjects
-
-Remove edit from student_levels/1
---------
-tags:guest
-
-Remove edit from subjects/1
---------
-tags:guest
-
-Remove add course from unsigned user
--------
-tags:guest
-
-Remove edit course from unsigned user
----------
-tags:guest
-
-/courses/1
-
-Ban regular user from viewing users
---------
-tags:student
-
-User lists, /users/
-User profile, /users/1
-Author name on /courses/1
-Users link on header
-
-Remove add lectures button for unsigned
--------
-tags:guest
-
-/courses/1
-
-Remove add lectures button for student
--------
-tags:student
-
-/courses/1
-
-Close lessons for guests
--------
-tags:guest
 
 Add lessons listing on a lesson page
 -------------
@@ -74,13 +32,12 @@ tags:student
 
 Also, there should be some kind of progress indicator, which lesson is current.
 
-Add next/prev lesson links on a lesson page
---------
-tags:student
-
 Test video playback
 -----------
 tags:student
+Add index on created_at for lesson model
+-------
+tags: student
 
 Summary page or link on /courses/1 for course vocabulary
 --------
@@ -137,6 +94,12 @@ index pages for logged in users
 ----------
 tags: student
 
+Add edit link on profile page for all users
+-----------
+tags: student
+
+Duplicate 'edit profile'
+
 DONE Users index page is visible to all signed in users.
 ------------------
 tags: guest
@@ -179,3 +142,54 @@ How many words and etc
 LATER Add video duration along an item in a list of lessons.
 -------------------
 tags: guest
+
+LATER Close lessons for guests
+-------
+tags:guest
+
+DONE Remove add subjects button from unsigned user
+-------
+tags:guest
+
+DONE Remove add lectures button for unsigned
+-------
+tags:guest
+
+/courses/1
+
+DONE Remove add course from unsigned user
+-------
+tags:guest
+
+DONE Remove edit from student_levels/1
+--------
+tags:guest
+
+DONE Remove edit from subjects/1
+--------
+tags:guest
+
+DONE Remove edit course from unsigned user
+---------
+tags:guest
+
+/courses/1
+
+DONE Ban regular user from viewing users
+--------
+tags:student
+
+User lists, /users/
+User profile, /users/1
+Author name on /courses/1
+Users link on header
+
+DONE Remove add lectures button for student
+-------
+tags:student
+
+/courses/1
+
+DONE Add next/prev lesson links on a lesson page
+--------
+tags:student
