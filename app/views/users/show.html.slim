@@ -4,3 +4,6 @@
   aside.span4
     section
       h1 #{@user.name} #{@user.surname}
+
+      p #{t("activerecord.attributes.user.email")}: #{@user.email}
+      = link_to t("messages.edit_user"), edit_user_path

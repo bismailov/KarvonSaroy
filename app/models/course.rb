@@ -29,4 +29,7 @@ class Course < ActiveRecord::Base
   validates :student_level_id, presence: true
   validates :title, presence: true, length: {maximum: 250}, uniqueness: {case_sensitive: false} 
   validates :objectives, presence: true
+  
+  default_scope order: "courses.subject_id, courses.student_level_id"
+
 end

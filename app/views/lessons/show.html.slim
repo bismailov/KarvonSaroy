@@ -14,8 +14,10 @@ ul.breadcrumb
 .row
   aside.span8
     section
-      = link_to "⇦ #{@lesson.previous_lesson.title} ", course_lesson_path(@course, @lesson.previous_lesson) if @lesson.previous_lesson
-      '|
+      - if @lesson.previous_lesson
+        = link_to "⇦ #{@lesson.previous_lesson.title} ", course_lesson_path(@course, @lesson.previous_lesson) 
+        - if @lesson.next_lesson
+          '|
       = link_to " #{@lesson.next_lesson.title} ⇨", course_lesson_path(@course, @lesson.next_lesson) if @lesson.next_lesson
       h1 = @lesson.title.capitalize
 

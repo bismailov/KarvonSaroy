@@ -1,9 +1,18 @@
-Add index on created_at for lesson model
--------
-tags: student
+Start sending email to users
+--------
+tags:student
 
-Fix tests
+Add help page
+----------
+tags:student
+
+Fill about page
 ------------
+tags:student
+
+Add uzbek desc in student level index
+----------
+tags:student
 
 Add edit pages for roles.
 -----------------
@@ -18,27 +27,6 @@ Expand /about page
 ------
 tags:guest
 
-Take notes from design document for fp
---------
-tags:guest
-
-
-"Yangi predmet qo'shish"
-/subjects
-
-Add lessons listing on a lesson page
--------------
-tags:student
-
-Also, there should be some kind of progress indicator, which lesson is current.
-
-Test video playback
------------
-tags:student
-Add index on created_at for lesson model
--------
-tags: student
-
 Summary page or link on /courses/1 for course vocabulary
 --------
 tags:student
@@ -47,10 +35,6 @@ Vocabulary is divided among lessons. But it would be convenient
 to have a summary list for all included words in a course.
 
 Maybe a separate field or regular expression.
-
-Sort /courses page
---------
-tags:student
 
 First by subject, then by student level.
 
@@ -82,21 +66,12 @@ Add email validation
 -------
 tags:student
 
+Add password reset thru email
+-------
+tags:student
 Add phone number validation
 -----------
 tags:student optional advanced
-
-Check landing pages after login/logout
---------
-tags: student
-
-index pages for logged in users
-----------
-tags: student
-
-Add edit link on profile page for all users
------------
-tags: student
 
 Duplicate 'edit profile'
 
@@ -191,5 +166,30 @@ tags:student
 /courses/1
 
 DONE Add next/prev lesson links on a lesson page
+--------
+tags:student
+
+DONE Add index on created_at for lesson model
+-------
+tags: student
+
+
+DONE Check landing pages after login/logout
+--------
+tags: student
+
+DONE index pages for logged in users
+----------
+tags: student
+
+DONE Take notes from design document for fp
+--------
+tags:guest, student
+
+DONE Add edit link on profile page for all users
+-----------
+tags: student
+
+DONE Sort /courses page
 --------
 tags:student

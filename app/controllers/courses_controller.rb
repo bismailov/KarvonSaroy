@@ -3,8 +3,9 @@ class CoursesController < ApplicationController
                  
   #GET /courses
   def index
-    # @courses = Course.all
     @courses = Course.paginate(page: params[:page] )
+    #moved ordering to the model (default_scope)
+    # @courses = Course.order("subject_id").order("student_level_id")
   end
 
   #GET /courses/1
