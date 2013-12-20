@@ -1,0 +1,156 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+$.fn.fileupload	app/assets/javascripts/bootstrap-fileupload.js	/^  }$/;"	f
+AddAdminToUsers	db/migrate/20130720121802_add_admin_to_users.rb	/^class AddAdminToUsers < ActiveRecord::Migration$/;"	c
+AddAttachmentVideoAttachmentToLessons	db/migrate/20131022082537_add_attachment_video_attachment_to_lessons.rb	/^class AddAttachmentVideoAttachmentToLessons < ActiveRecord::Migration$/;"	c
+AddDescriptionToStudentLevels	db/migrate/20131211145913_add_description_to_student_levels.rb.rb	/^class AddDescriptionToStudentLevels < ActiveRecord::Migration$/;"	c
+AddEditorToUsers	db/migrate/20130811111920_add_editor_to_users.rb	/^class AddEditorToUsers < ActiveRecord::Migration$/;"	c
+AddIndexToCoursesTitle	db/migrate/20130810130212_add_index_to_courses_title.rb	/^class AddIndexToCoursesTitle < ActiveRecord::Migration$/;"	c
+AddIndexToLessonsCreatedAt	db/20131214094833_add_index_to_lessons_created_at.rb	/^class AddIndexToLessonsCreatedAt < ActiveRecord::Migration$/;"	c
+AddIndexToLessonsTitle	db/migrate/20130926140911_add_index_to_lessons_title.rb	/^class AddIndexToLessonsTitle < ActiveRecord::Migration$/;"	c
+AddIndexToStudentLevelsTitle	db/migrate/20130808073338_add_index_to_student_levels_title.rb	/^class AddIndexToStudentLevelsTitle < ActiveRecord::Migration$/;"	c
+AddIndexToSubjectsTitle	db/migrate/20130801162432_add_index_to_subjects_title.rb	/^class AddIndexToSubjectsTitle < ActiveRecord::Migration$/;"	c
+AddIndexToUsersEmail	db/migrate/20130628100829_add_index_to_users_email.rb	/^class AddIndexToUsersEmail < ActiveRecord::Migration$/;"	c
+AddPasswordDigestToUsers	db/migrate/20130628160528_add_password_digest_to_users.rb	/^class AddPasswordDigestToUsers < ActiveRecord::Migration$/;"	c
+AddPerishableTokenToUser	db/migrate/20131219111319_add_perishable_token_to_user.rb	/^class AddPerishableTokenToUser < ActiveRecord::Migration$/;"	c
+AddRememberTokenToUsers	db/migrate/20130712144444_add_remember_token_to_users.rb	/^class AddRememberTokenToUsers < ActiveRecord::Migration$/;"	c
+AddRoleToUsers	db/migrate/20130812053527_add_role_to_users.rb	/^class AddRoleToUsers < ActiveRecord::Migration$/;"	c
+AddSurnameToUsers	db/migrate/20130630125957_add_surname_to_users.rb	/^class AddSurnameToUsers < ActiveRecord::Migration$/;"	c
+AddVerifiedToUsers	db/migrate/20131220060756_add_verified_to_users.rb	/^class AddVerifiedToUsers < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:KarvonSaroy
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Course	app/models/course.rb	/^class Course < ActiveRecord::Base$/;"	c
+CoursesController	app/controllers/courses_controller.rb	/^class CoursesController < ApplicationController$/;"	c
+CreateCourses	db/migrate/20130801123835_create_courses.rb	/^class CreateCourses < ActiveRecord::Migration$/;"	c
+CreateLessons	db/migrate/20130926121110_create_lessons.rb	/^class CreateLessons < ActiveRecord::Migration$/;"	c
+CreateStudentLevels	db/migrate/20130801124453_create_student_levels.rb	/^class CreateStudentLevels < ActiveRecord::Migration$/;"	c
+CreateSubjects	db/migrate/20130801124423_create_subjects.rb	/^class CreateSubjects < ActiveRecord::Migration$/;"	c
+CreateUsers	db/migrate/20130628064243_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+ExampleGroup	spec/spec_helper.rb	/^  class ExampleGroup$/;"	c
+Fileupload	app/assets/javascripts/bootstrap-fileupload.js	/^  var Fileupload = function (element, options) {$/;"	c
+Fileupload.Fileupload	app/assets/javascripts/bootstrap-fileupload.js	/^  }$/;"	c
+Fileupload.Fileupload.Fileupload.listen	app/assets/javascripts/bootstrap-fileupload.js	/^  Fileupload.prototype = {$/;"	m
+KarvonSaroy	config/application.rb	/^module KarvonSaroy$/;"	m
+Lesson	app/models/lesson.rb	/^class Lesson < ActiveRecord::Base$/;"	c
+LessonsController	app/controllers/lessons_controller.rb	/^class LessonsController < ApplicationController$/;"	c
+Notifier	app/mailers/notifier.rb	/^class Notifier < ActionMailer::Base$/;"	c
+RemoveAdminFromUser	db/migrate/20130921080453_remove_admin_from_user.rb	/^class RemoveAdminFromUser < ActiveRecord::Migration$/;"	c
+RemoveDescriptionFromStudentLevels	db/migrate/20131211145416_remove_description_from_student_levels.rb	/^class RemoveDescriptionFromStudentLevels < ActiveRecord::Migration$/;"	c
+RemoveEditorFromUser	db/migrate/20130921080603_remove_editor_from_user.rb	/^class RemoveEditorFromUser < ActiveRecord::Migration$/;"	c
+SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
+SocialCount.isGradeA	app/assets/javascripts/socialcount.js	/^	var SocialCount = {$/;"	p
+StaticPagesController	app/controllers/static_pages_controller.rb	/^class StaticPagesController < ApplicationController$/;"	c
+StaticPagesHelper	app/helpers/static_pages_helper.rb	/^module StaticPagesHelper$/;"	m
+StudentLevel	app/models/student_level.rb	/^class StudentLevel < ActiveRecord::Base$/;"	c
+StudentLevelsController	app/controllers/student_levels_controller.rb	/^class StudentLevelsController < ApplicationController$/;"	c
+Subject	app/models/subject.rb	/^class Subject < ActiveRecord::Base$/;"	c
+SubjectsController	app/controllers/subjects_controller.rb	/^class SubjectsController < ApplicationController$/;"	c
+SubjectsHelper	app/helpers/subjects_helper.rb	/^module SubjectsHelper$/;"	m
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserVerificationsController	app/controllers/user_verifications_controller.rb	/^class UserVerificationsController < ApplicationController$/;"	c
+UserVerificationsHelper	app/helpers/user_verifications_helper.rb	/^module UserVerificationsHelper$/;"	m
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+about	app/controllers/static_pages_controller.rb	/^  def about$/;"	f	class:StaticPagesController
+authorized_for_roles	app/helpers/sessions_helper.rb	/^  def authorized_for_roles(*args)$/;"	f	class:SessionsHelper
+bindPlugins	app/assets/javascripts/socialcount.js	/^			var bindPlugins = SocialCount.plugins.bind;$/;"	v
+change	db/20131214094833_add_index_to_lessons_created_at.rb	/^  def change$/;"	f	class:AddIndexToLessonsCreatedAt
+change	db/migrate/20130628064243_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	db/migrate/20130628100829_add_index_to_users_email.rb	/^  def change$/;"	f	class:AddIndexToUsersEmail
+change	db/migrate/20130628160528_add_password_digest_to_users.rb	/^  def change$/;"	f	class:AddPasswordDigestToUsers
+change	db/migrate/20130630125957_add_surname_to_users.rb	/^  def change$/;"	f	class:AddSurnameToUsers
+change	db/migrate/20130712144444_add_remember_token_to_users.rb	/^  def change$/;"	f	class:AddRememberTokenToUsers
+change	db/migrate/20130720121802_add_admin_to_users.rb	/^  def change$/;"	f	class:AddAdminToUsers
+change	db/migrate/20130801123835_create_courses.rb	/^  def change$/;"	f	class:CreateCourses
+change	db/migrate/20130801124423_create_subjects.rb	/^  def change$/;"	f	class:CreateSubjects
+change	db/migrate/20130801124453_create_student_levels.rb	/^  def change$/;"	f	class:CreateStudentLevels
+change	db/migrate/20130801162432_add_index_to_subjects_title.rb	/^  def change$/;"	f	class:AddIndexToSubjectsTitle
+change	db/migrate/20130808073338_add_index_to_student_levels_title.rb	/^  def change$/;"	f	class:AddIndexToStudentLevelsTitle
+change	db/migrate/20130810130212_add_index_to_courses_title.rb	/^  def change$/;"	f	class:AddIndexToCoursesTitle
+change	db/migrate/20130811111920_add_editor_to_users.rb	/^  def change$/;"	f	class:AddEditorToUsers
+change	db/migrate/20130812053527_add_role_to_users.rb	/^  def change$/;"	f	class:AddRoleToUsers
+change	db/migrate/20130926121110_create_lessons.rb	/^  def change$/;"	f	class:CreateLessons
+change	db/migrate/20130926140911_add_index_to_lessons_title.rb	/^  def change$/;"	f	class:AddIndexToLessonsTitle
+change	db/migrate/20131211145913_add_description_to_student_levels.rb.rb	/^  def change$/;"	f	class:AddDescriptionToStudentLevels
+change	db/migrate/20131219111319_add_perishable_token_to_user.rb	/^  def change$/;"	f	class:AddPerishableTokenToUser
+change	db/migrate/20131220060756_add_verified_to_users.rb	/^  def change$/;"	f	class:AddVerifiedToUsers
+correct_user	app/helpers/sessions_helper.rb	/^  def correct_user$/;"	f	class:SessionsHelper
+create	app/controllers/courses_controller.rb	/^  def create$/;"	f	class:CoursesController
+create	app/controllers/lessons_controller.rb	/^  def create$/;"	f	class:LessonsController
+create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	app/controllers/student_levels_controller.rb	/^  def create$/;"	f	class:StudentLevelsController
+create	app/controllers/subjects_controller.rb	/^  def create$/;"	f	class:SubjectsController
+create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+create_remember_token	app/models/user.rb	/^    def create_remember_token$/;"	f	class:User
+current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
+current_user=	app/helpers/sessions_helper.rb	/^  def current_user=(user)$/;"	f	class:SessionsHelper
+current_user?	app/helpers/sessions_helper.rb	/^  def current_user?(user)$/;"	f	class:SessionsHelper
+deliver_verification_instructions!	app/models/user.rb	/^  def deliver_verification_instructions!$/;"	f	class:User
+destroy	app/controllers/courses_controller.rb	/^  def destroy$/;"	f	class:CoursesController
+destroy	app/controllers/lessons_controller.rb	/^  def destroy$/;"	f	class:LessonsController
+destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+destroy	app/controllers/student_levels_controller.rb	/^  def destroy$/;"	f	class:StudentLevelsController
+destroy	app/controllers/subjects_controller.rb	/^  def destroy$/;"	f	class:SubjectsController
+destroy	app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
+down	db/migrate/20130921080453_remove_admin_from_user.rb	/^  def down$/;"	f	class:RemoveAdminFromUser
+down	db/migrate/20130921080603_remove_editor_from_user.rb	/^  def down$/;"	f	class:RemoveEditorFromUser
+down	db/migrate/20131022082537_add_attachment_video_attachment_to_lessons.rb	/^  def self.down$/;"	F	class:AddAttachmentVideoAttachmentToLessons
+down	db/migrate/20131211145416_remove_description_from_student_levels.rb	/^  def down$/;"	f	class:RemoveDescriptionFromStudentLevels
+edit	app/controllers/courses_controller.rb	/^  def edit$/;"	f	class:CoursesController
+edit	app/controllers/lessons_controller.rb	/^  def edit$/;"	f	class:LessonsController
+edit	app/controllers/student_levels_controller.rb	/^  def edit$/;"	f	class:StudentLevelsController
+edit	app/controllers/subjects_controller.rb	/^  def edit$/;"	f	class:SubjectsController
+edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
+featureTest	app/assets/javascripts/socialcount.js	/^	function featureTest( prop, unprefixedProp ) {$/;"	f
+find_using_perishable_token	app/models/user.rb	/^  def self.find_using_perishable_token(token, $/;"	F	class:User
+generate_perishable_token	app/models/user.rb	/^    def generate_perishable_token$/;"	f	class:User
+home	app/controllers/static_pages_controller.rb	/^  def home$/;"	f	class:StaticPagesController
+index	app/controllers/courses_controller.rb	/^  def index$/;"	f	class:CoursesController
+index	app/controllers/lessons_controller.rb	/^  def index$/;"	f	class:LessonsController
+index	app/controllers/student_levels_controller.rb	/^  def index$/;"	f	class:StudentLevelsController
+index	app/controllers/subjects_controller.rb	/^  def index$/;"	f	class:SubjectsController
+index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
+load_course	app/controllers/lessons_controller.rb	/^    def load_course$/;"	f	class:LessonsController
+load_user_using_perishable_token	app/controllers/user_verifications_controller.rb	/^    def load_user_using_perishable_token$/;"	f	class:UserVerificationsController
+new	app/controllers/courses_controller.rb	/^  def new$/;"	f	class:CoursesController
+new	app/controllers/lessons_controller.rb	/^  def new$/;"	f	class:LessonsController
+new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
+new	app/controllers/student_levels_controller.rb	/^  def new$/;"	f	class:StudentLevelsController
+new	app/controllers/subjects_controller.rb	/^  def new$/;"	f	class:SubjectsController
+new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+next_lesson	app/models/lesson.rb	/^  def next_lesson$/;"	f	class:Lesson
+previous_lesson	app/models/lesson.rb	/^  def previous_lesson$/;"	f	class:Lesson
+redirect_back_or	app/helpers/sessions_helper.rb	/^  def redirect_back_or(default)$/;"	f	class:SessionsHelper
+removeFileName	app/assets/javascripts/socialcount.js	/^	function removeFileName( src ) {$/;"	f
+resolveServiceDir	app/assets/javascripts/socialcount.js	/^	function resolveServiceDir() {$/;"	f
+show	app/controllers/courses_controller.rb	/^  def show$/;"	f	class:CoursesController
+show	app/controllers/lessons_controller.rb	/^  def show$/;"	f	class:LessonsController
+show	app/controllers/student_levels_controller.rb	/^  def show$/;"	f	class:StudentLevelsController
+show	app/controllers/subjects_controller.rb	/^  def show$/;"	f	class:SubjectsController
+show	app/controllers/user_verifications_controller.rb	/^  def show$/;"	f	class:UserVerificationsController
+show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+sign_in	app/helpers/sessions_helper.rb	/^  def sign_in(user)$/;"	f	class:SessionsHelper
+sign_in	spec/support/utilities.rb	/^def sign_in(user)$/;"	f
+sign_out	app/helpers/sessions_helper.rb	/^  def sign_out$/;"	f	class:SessionsHelper
+signed_in?	app/helpers/sessions_helper.rb	/^  def signed_in?$/;"	f	class:SessionsHelper
+signed_in_user	app/helpers/sessions_helper.rb	/^  def signed_in_user$/;"	f	class:SessionsHelper
+store_location	app/helpers/sessions_helper.rb	/^  def store_location$/;"	f	class:SessionsHelper
+title_for_select	app/models/student_level.rb	/^    def title_for_select$/;"	f	class:StudentLevel
+title_for_select	app/models/subject.rb	/^    def title_for_select$/;"	f	class:Subject
+up	db/migrate/20130921080453_remove_admin_from_user.rb	/^  def up$/;"	f	class:RemoveAdminFromUser
+up	db/migrate/20130921080603_remove_editor_from_user.rb	/^  def up$/;"	f	class:RemoveEditorFromUser
+up	db/migrate/20131022082537_add_attachment_video_attachment_to_lessons.rb	/^  def self.up$/;"	F	class:AddAttachmentVideoAttachmentToLessons
+up	db/migrate/20131211145416_remove_description_from_student_levels.rb	/^  def up$/;"	f	class:RemoveDescriptionFromStudentLevels
+update	app/controllers/courses_controller.rb	/^  def update$/;"	f	class:CoursesController
+update	app/controllers/lessons_controller.rb	/^  def update$/;"	f	class:LessonsController
+update	app/controllers/student_levels_controller.rb	/^  def update$/;"	f	class:StudentLevelsController
+update	app/controllers/subjects_controller.rb	/^  def update$/;"	f	class:SubjectsController
+update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
+verify!	app/models/user.rb	/^  def verify!$/;"	f	class:User
+verify_email	app/mailers/notifier.rb	/^  def verify_email(user)$/;"	f	class:Notifier

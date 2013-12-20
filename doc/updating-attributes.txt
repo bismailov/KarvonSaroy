@@ -22,3 +22,6 @@ update_attributes	Yes	Yes	Yes	Yes
 
 Adding admin: in rails c -
 User.last.toggle!(:admin) 
+
+Also, to see what is going on
+model.errors

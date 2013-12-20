@@ -1,3 +1,23 @@
+Add yaml for secret information
+--------
+tags:student
+
+Move default email to there from notifier
+
+Add register link to other pages
+-------
+tags:student
+
+Create multipart alternative emails
+------
+tags:student
+
+See email rails doc, 2.1.3.
+
+Update default hash in mailer class
+-------
+tags: student
+
 Start sending email to users
 --------
 tags:student
@@ -5,6 +25,8 @@ tags:student
 Add help page
 ----------
 tags:student
+
+Recommendations for parents, which books to read, dictionaries.
 
 Fill about page
 ------------

@@ -1,8 +1,9 @@
 KarvonSaroy::Application.routes.draw do
 
-  get "subjects/new"
+  KarvonSaroy::Application.routes.default_url_options[:host] = KarvonSaroy::Application.config.APP_NAME
 
-  # get "users/new"
+  # get "subjects/new"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :subjects
@@ -11,6 +12,7 @@ KarvonSaroy::Application.routes.draw do
     resources :lessons 
   end
 
+
   root :to => 'static_pages#home'
 
   match '/about', to: 'static_pages#about'
@@ -18,8 +20,7 @@ KarvonSaroy::Application.routes.draw do
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-
-
+  resources :user_verifications, :only => [:show]
 
   # get "static_pages/home"
   # get "static_pages/about"

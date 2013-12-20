@@ -106,3 +106,9 @@ uzlt:
   will_paginate:
     next_label: keyingi sahifa
     previous_label: oldingi sahifa
+  notifier:
+    verify_email:
+      subject: Iltimos email manzilingizni tasdiqlang 
+      greeting: Assalomu alaykum!
+      thanks_for_verification: Email manzilingizni tasdiqlaganingiz uchun rahmat!
+      unable_to_find_account: Sizning email manzilingiz bizning ro'yxatda yo'q (account not found).

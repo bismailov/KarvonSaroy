@@ -1,0 +1,3 @@
+      user_verifications_show GET    /user_verifications/show(.:format)             user_verifications#show
+      user_verification GET    /user_verifications/:id(.:format)              user_verifications#show
+

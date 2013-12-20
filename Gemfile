@@ -30,6 +30,9 @@ gem 'slim', '2.0.0'
 #for mass mailing list and etc
 #gem madmimi 
 
+group :development do
+  gem "letter_opener", "1.2.0"
+end
 
 group :test, :development do
   gem 'rspec-rails', '2.13.2'

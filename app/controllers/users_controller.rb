@@ -32,6 +32,7 @@ class UsersController < ApplicationController
 
     @user = User.new(params[:user])
     if @user.save
+      @user.deliver_verification_instructions!
       sign_in @user
       flash[:success] = t("messages.registration_welcome")
       redirect_to @user

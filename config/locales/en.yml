@@ -106,3 +106,9 @@ en:
   will_paginate:
     next_label: next
     previous_label: previous
+  notifier:
+    verify_email:
+      subject: Please verify your email address
+      greeting: Hi,
+      thanks_for_verification: Thank's for verifying your account!
+      unable_to_find_account: Unable to find your account.
