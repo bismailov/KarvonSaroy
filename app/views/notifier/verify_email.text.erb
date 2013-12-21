@@ -1,7 +1,11 @@
-<%= @greeting %>, 
+<%= @greeting %>
 
-You must verify your new account. If you did not make this request, simply ignore this email. If you did make this request just click the link below:
+<%= t("notifier.verify_email.email_verif_part_1") %>
 
 <%= @confirm_account_url %>
 
-If the above URL does not work try copying and pasting it into your browser. If you continue to have problem please feel free to contact us.
+<%= t("notifier.verify_email.email_verif_part_2") %>
+
+<%= KarvonSaroy::Application.config.APP_NAME %>
+
+<%= KarvonSaroy::Application.config.APP_EMAIL %>

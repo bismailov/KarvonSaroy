@@ -112,3 +112,5 @@ uzlt:
       greeting: Assalomu alaykum!
       thanks_for_verification: Email manzilingizni tasdiqlaganingiz uchun rahmat!
       unable_to_find_account: Sizning email manzilingiz bizning ro'yxatda yo'q (account not found).
+      email_verif_part_1: Iltimos, email manzilingizni tasdiqlang. Agar ushbu xatni jo'natishni so'ramagan bo'lsangiz, hech narsa qilmang. Tasdiqlash uchun quyidagi linkni bosing.
+      email_verif_part_2: Yuqoridagi link ishlamasa, brauzerga ko'chirib, ishlatib ko'ring. Muammo hal bo'lmasa, bizga murojaat qilishingiz mumkin.
