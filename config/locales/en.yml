@@ -48,7 +48,7 @@ en:
     error_on_form: 
       one: The form contains %{count} error
       other: The form contains %{count} errors
-    registration_welcome: "Welcome to the site! Registration is successful."
+    registration_welcome: "Welcome to the site! Registration is successful. We sent you an email with a link for verifying your account."
     register_me: "Register me"  
     registration: Registration
     is_new_user: New user?
@@ -114,3 +114,5 @@ en:
       unable_to_find_account: Unable to find your account.
       email_verif_part_1: "You must verify your new account. If you did not make this request, simply ignore this email. If you did make this request just click the link below:"
       email_verif_part_2: If the above URL does not work try copying and pasting it into your browser. If you continue to have problem please feel free to contact us.
+      verify_your_account: Verify your account
+      verification_email_resent: We sent you an email with a link for verifying your account. 

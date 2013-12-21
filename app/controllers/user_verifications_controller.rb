@@ -16,6 +16,16 @@ class UserVerificationsController < ApplicationController
 
   end
 
+  def resend_activation
+    if signed_in? && !@user.verified
+      @user.deliver_verification_instructions!
+      flash[:notice] = t("notifier.verify_email.verification_email_resent")
+      redirect_to root_path
+    end
+  end
+
+      
+
   private
 
     def load_user_using_perishable_token

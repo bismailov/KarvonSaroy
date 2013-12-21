@@ -21,10 +21,21 @@ KarvonSaroy::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
 
   resources :user_verifications, :only => [:show]
+  resources :user_verifications, :only => [:resend_activation] do
+    match :resend_activation, :via => [:get], :on => :member
+  end
 
-  # get "static_pages/home"
-  # get "static_pages/about"
+ #delete
+  # resources :bids do
+  #   match :retract, :via => [:get, :post], :on => :member
+  # end
+
+  # map.resources :users, :collection => { :resend_activation => :get }
+
   
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

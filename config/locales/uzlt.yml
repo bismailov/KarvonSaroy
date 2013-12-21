@@ -48,7 +48,7 @@ uzlt:
     error_on_form:
       one: Formada %{count} dona xato mavjud
       other: Formada %{count} dona xato mavjud
-    registration_welcome: "Saytimizda ro'yxatdan o'tdingiz!"
+    registration_welcome: "Saytimizda ro'yxatdan o'tdingiz! Email manzilingizni tasdiqlatish uchun sizga xat yubordik."
     register_me: Meni ro'yxatdan o'tkaz
     registration: Ro'yxatdan o'tish
     is_new_user: Yangi qo'llanuvchimisiz?
@@ -114,3 +114,5 @@ uzlt:
       unable_to_find_account: Sizning email manzilingiz bizning ro'yxatda yo'q (account not found).
       email_verif_part_1: Iltimos, email manzilingizni tasdiqlang. Agar ushbu xatni jo'natishni so'ramagan bo'lsangiz, hech narsa qilmang. Tasdiqlash uchun quyidagi linkni bosing.
       email_verif_part_2: Yuqoridagi link ishlamasa, brauzerga ko'chirib, ishlatib ko'ring. Muammo hal bo'lmasa, bizga murojaat qilishingiz mumkin.
+      verify_your_account: Email manzilingizni tasdiqlash
+      verification_email_resent: Email manzilingizni tasdiqlatish uchun sizga xat yubordik.

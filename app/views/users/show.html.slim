@@ -7,3 +7,6 @@
 
       p #{t("activerecord.attributes.user.email")}: #{@user.email}
       = link_to t("messages.edit_user"), edit_user_path
+      br
+      - if signed_in? && !@user.try(:verified) && current_user?(@user) && @user.try(:perishable_token)
+        = link_to t("notifier.verify_email.verify_your_account"), resend_activation_user_verification_path(@user.perishable_token)
