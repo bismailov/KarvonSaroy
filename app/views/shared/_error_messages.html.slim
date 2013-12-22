@@ -5,6 +5,6 @@
       #{t('messages.error_on_form', count: object.errors.count)}
     ul
       - object.errors.full_messages.each do |msg|
-        li * #{t(msg)}
+        li == "* #{t(msg).capitalize}"
       end
 end

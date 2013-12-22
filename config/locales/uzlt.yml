@@ -17,6 +17,7 @@ uzlt:
             email:
               blank: bo'sh bo'lishi mumkin emas 
               invalid: xato kiritilgan
+              taken: saytda mavjud, boshqa email kiriting 
             password:
               blank: bo'sh bo'lishi mumkin emas
               too_short: qisqa (minimum %{count} belgi)

@@ -17,6 +17,7 @@ en:
             email:
               blank: can't be blank
               invalid: is invalid
+              taken: is taken, enter another one
             password:
               blank: can't be blank
               too_short: is too short (minimum is %{count} characters)
