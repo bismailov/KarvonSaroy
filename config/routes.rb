@@ -12,7 +12,6 @@ KarvonSaroy::Application.routes.draw do
     resources :lessons 
   end
 
-
   root :to => 'static_pages#home'
 
   match '/about', to: 'static_pages#about'
@@ -25,16 +24,7 @@ KarvonSaroy::Application.routes.draw do
     match :resend_activation, :via => [:get], :on => :member
   end
 
- #delete
-  # resources :bids do
-  #   match :retract, :via => [:get, :post], :on => :member
-  # end
-
-  # map.resources :users, :collection => { :resend_activation => :get }
-
-  
-
-
+  resources :password_resets, :except => [:destroy, :index, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

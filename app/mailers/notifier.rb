@@ -15,4 +15,12 @@ class Notifier < ActionMailer::Base
     mail to: user.email, 
       subject: "[#{KarvonSaroy::Application.config.APP_NAME}] #{t("notifier.verify_email.subject")}"
   end
+
+  def password_reset_instructions(user)
+    @edit_password_reset_url = edit_password_reset_url(user.perishable_token)
+
+    mail to: user.email,
+      subject: "[#{KarvonSaroy::Application.config.APP_NAME}] #{t("notifier.password_reset_instructions.subject")}"
+  end
+
 end

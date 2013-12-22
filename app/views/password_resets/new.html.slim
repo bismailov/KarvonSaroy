@@ -1,0 +1,14 @@
+.row
+  .span7.offset1
+
+    h3 #{t("notifier.password_reset_instructions.reset_password")}
+
+    p #{t("notifier.password_reset_instructions.new_form_help")}
+
+  .span4.offset1
+    = form_tag password_resets_path do
+      <label>#{t("activerecord.attributes.user.email")}:</label>
+      = text_field_tag "email"
+      = submit_tag t("notifier.password_reset_instructions.reset_my_password"), class: "btn btn-medium btn-primary"
+
+    = link_to t("ui.home"), root_path

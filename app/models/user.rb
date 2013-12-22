@@ -45,6 +45,10 @@ class User < ActiveRecord::Base
     Notifier.verify_email(self).deliver
   end
 
+  def deliver_password_reset_instructions!
+    generate_perishable_token
+    Notifier.password_reset_instructions(self).deliver
+  end
 
   def self.find_using_perishable_token(token, 
         age = KarvonSaroy::Application.config.PERISHABLE_TOKEN_VALID_FOR)
@@ -79,7 +83,5 @@ class User < ActiveRecord::Base
       # self.perishable_token = SecureRandom.urlsafe_base64
       self.update_attribute(:perishable_token, SecureRandom.urlsafe_base64)
     end
-
-
 
 end

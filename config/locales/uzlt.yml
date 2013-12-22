@@ -104,6 +104,7 @@ uzlt:
     administration: Boshqaruv menusi
     course_author: Kurs muallifi
     lessons_count: Darslar soni
+    update_password: Parolimni o'zgartir
   will_paginate:
     next_label: keyingi sahifa
     previous_label: oldingi sahifa
@@ -117,3 +118,17 @@ uzlt:
       email_verif_part_2: Yuqoridagi link ishlamasa, brauzerga ko'chirib, ishlatib ko'ring. Muammo hal bo'lmasa, bizga murojaat qilishingiz mumkin.
       verify_your_account: Email manzilingizni tasdiqlash
       verification_email_resent: Email manzilingizni tasdiqlatish uchun sizga xat yubordik.
+    password_reset_instructions:
+      subject: Parol o'zgartirish xati
+      reset_your_password: Parolingizni o'zgartirish
+      password_reset_part_1: "Parolingizni o'zgartirish haqida iltimosga binoan ushbu xatni oldingiz. Agar bunday buyruq bermagan bo'lsangiz, hech narsa qilmang. Parolni o'zgartirish uchun quyidagi linkni bosing."
+      change_password: Parolimni o'zgartirish
+      reset_password: Parolimni o'zgartirish 
+      reset_my_password: Parolimni yangila
+      need_to_reset_password: "Parolingizni unutdingizmi?"
+      new_form_help: "Agar parolingizni unutgan bo'lsangiz, quyidagi formaga email manzilingizni kiritib, tugmani bosing. Pochtangizga parolni o'zgartirish bo'yicha ma'lumot yuboramiz. Diqqat: xatni olgandan so'ng, yangi parolni kiritish uchun 10 daqiqangiz bor." 
+      edit_form_help: "Parolni kiritishdan oldin, klaviatura kerakli tildaligini (En/Uz/Ru) va CAPS LOCK tugmasi o'chiq ekanligini (ishlamayatganligini) tekshiring." 
+      account_not_found: "Email manzil topilmadi yoki parolni o'zgartirish uchun yuborgan linkimiz muddati tugadi." 
+      password_updated: "Yangi parol qabul qilindi."
+      user_not_found: "Bunday emailga ega qo'llanuvchi mavjud emas."
+      instructions_sent: "Sizga xat yubordik, iltimos pochtangizni tekshiring."

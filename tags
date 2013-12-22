@@ -39,6 +39,7 @@ KarvonSaroy	config/application.rb	/^module KarvonSaroy$/;"	m
 Lesson	app/models/lesson.rb	/^class Lesson < ActiveRecord::Base$/;"	c
 LessonsController	app/controllers/lessons_controller.rb	/^class LessonsController < ApplicationController$/;"	c
 Notifier	app/mailers/notifier.rb	/^class Notifier < ActionMailer::Base$/;"	c
+PasswordResetsController	app/controllers/password_resets_controller.rb	/^class PasswordResetsController < ApplicationController$/;"	c
 RemoveAdminFromUser	db/migrate/20130921080453_remove_admin_from_user.rb	/^class RemoveAdminFromUser < ActiveRecord::Migration$/;"	c
 RemoveDescriptionFromStudentLevels	db/migrate/20131211145416_remove_description_from_student_levels.rb	/^class RemoveDescriptionFromStudentLevels < ActiveRecord::Migration$/;"	c
 RemoveEditorFromUser	db/migrate/20130921080603_remove_editor_from_user.rb	/^class RemoveEditorFromUser < ActiveRecord::Migration$/;"	c
@@ -83,14 +84,16 @@ change	db/migrate/20131220060756_add_verified_to_users.rb	/^  def change$/;"	f	c
 correct_user	app/helpers/sessions_helper.rb	/^  def correct_user$/;"	f	class:SessionsHelper
 create	app/controllers/courses_controller.rb	/^  def create$/;"	f	class:CoursesController
 create	app/controllers/lessons_controller.rb	/^  def create$/;"	f	class:LessonsController
+create	app/controllers/password_resets_controller.rb	/^  def create$/;"	f	class:PasswordResetsController
 create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
 create	app/controllers/student_levels_controller.rb	/^  def create$/;"	f	class:StudentLevelsController
 create	app/controllers/subjects_controller.rb	/^  def create$/;"	f	class:SubjectsController
 create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
-create_remember_token	app/models/user.rb	/^    def create_remember_token$/;"	f	class:User
+create_remember_token	app/models/user.rb	/^    def create_remember_token #used for sessions$/;"	f	class:User
 current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
 current_user=	app/helpers/sessions_helper.rb	/^  def current_user=(user)$/;"	f	class:SessionsHelper
 current_user?	app/helpers/sessions_helper.rb	/^  def current_user?(user)$/;"	f	class:SessionsHelper
+deliver_password_reset_instructions!	app/models/user.rb	/^  def deliver_password_reset_instructions!$/;"	f	class:User
 deliver_verification_instructions!	app/models/user.rb	/^  def deliver_verification_instructions!$/;"	f	class:User
 destroy	app/controllers/courses_controller.rb	/^  def destroy$/;"	f	class:CoursesController
 destroy	app/controllers/lessons_controller.rb	/^  def destroy$/;"	f	class:LessonsController
@@ -104,6 +107,7 @@ down	db/migrate/20131022082537_add_attachment_video_attachment_to_lessons.rb	/^ 
 down	db/migrate/20131211145416_remove_description_from_student_levels.rb	/^  def down$/;"	f	class:RemoveDescriptionFromStudentLevels
 edit	app/controllers/courses_controller.rb	/^  def edit$/;"	f	class:CoursesController
 edit	app/controllers/lessons_controller.rb	/^  def edit$/;"	f	class:LessonsController
+edit	app/controllers/password_resets_controller.rb	/^  def edit$/;"	f	class:PasswordResetsController
 edit	app/controllers/student_levels_controller.rb	/^  def edit$/;"	f	class:StudentLevelsController
 edit	app/controllers/subjects_controller.rb	/^  def edit$/;"	f	class:SubjectsController
 edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
@@ -117,17 +121,21 @@ index	app/controllers/student_levels_controller.rb	/^  def index$/;"	f	class:Stu
 index	app/controllers/subjects_controller.rb	/^  def index$/;"	f	class:SubjectsController
 index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
 load_course	app/controllers/lessons_controller.rb	/^    def load_course$/;"	f	class:LessonsController
+load_user_using_perishable_token	app/controllers/password_resets_controller.rb	/^  def load_user_using_perishable_token$/;"	f	class:PasswordResetsController
 load_user_using_perishable_token	app/controllers/user_verifications_controller.rb	/^    def load_user_using_perishable_token$/;"	f	class:UserVerificationsController
 new	app/controllers/courses_controller.rb	/^  def new$/;"	f	class:CoursesController
 new	app/controllers/lessons_controller.rb	/^  def new$/;"	f	class:LessonsController
+new	app/controllers/password_resets_controller.rb	/^  def new$/;"	f	class:PasswordResetsController
 new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
 new	app/controllers/student_levels_controller.rb	/^  def new$/;"	f	class:StudentLevelsController
 new	app/controllers/subjects_controller.rb	/^  def new$/;"	f	class:SubjectsController
 new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
 next_lesson	app/models/lesson.rb	/^  def next_lesson$/;"	f	class:Lesson
+password_reset_instructions	app/mailers/notifier.rb	/^  def password_reset_instructions(user)$/;"	f	class:Notifier
 previous_lesson	app/models/lesson.rb	/^  def previous_lesson$/;"	f	class:Lesson
 redirect_back_or	app/helpers/sessions_helper.rb	/^  def redirect_back_or(default)$/;"	f	class:SessionsHelper
 removeFileName	app/assets/javascripts/socialcount.js	/^	function removeFileName( src ) {$/;"	f
+resend_activation	app/controllers/user_verifications_controller.rb	/^  def resend_activation$/;"	f	class:UserVerificationsController
 resolveServiceDir	app/assets/javascripts/socialcount.js	/^	function resolveServiceDir() {$/;"	f
 show	app/controllers/courses_controller.rb	/^  def show$/;"	f	class:CoursesController
 show	app/controllers/lessons_controller.rb	/^  def show$/;"	f	class:LessonsController
@@ -149,6 +157,7 @@ up	db/migrate/20131022082537_add_attachment_video_attachment_to_lessons.rb	/^  d
 up	db/migrate/20131211145416_remove_description_from_student_levels.rb	/^  def up$/;"	f	class:RemoveDescriptionFromStudentLevels
 update	app/controllers/courses_controller.rb	/^  def update$/;"	f	class:CoursesController
 update	app/controllers/lessons_controller.rb	/^  def update$/;"	f	class:LessonsController
+update	app/controllers/password_resets_controller.rb	/^  def update$/;"	f	class:PasswordResetsController
 update	app/controllers/student_levels_controller.rb	/^  def update$/;"	f	class:StudentLevelsController
 update	app/controllers/subjects_controller.rb	/^  def update$/;"	f	class:SubjectsController
 update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController

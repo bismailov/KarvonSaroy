@@ -104,6 +104,7 @@ en:
     administration: Administration
     course_author: Course author
     lessons_count: Number of lessons
+    update_password: Update my password
   will_paginate:
     next_label: next
     previous_label: previous
@@ -117,3 +118,17 @@ en:
       email_verif_part_2: If the above URL does not work try copying and pasting it into your browser. If you continue to have problem please feel free to contact us.
       verify_your_account: Verify your account
       verification_email_resent: We sent you an email with a link for verifying your account. 
+    password_reset_instructions:
+      subject: Password reset instructions 
+      reset_your_password: Reset your password
+      password_reset_part_1: "A request to reset your password has been made. If you did not make this request, simply ignore this email. If you did make this request just click the link below:"
+      change_password: Change my password
+      reset_password: Reset password
+      reset_my_password: Reset my password
+      need_to_reset_password: "Forgot your password?"
+      new_form_help: "If you forgot your account password, please enter your email address, we will send your instructions for resetting your old password. You will have 10 minutes to enter new password." 
+      edit_form_help: "Before entering new password, make sure you chose proper language keyboard layout and CAPS LOCK is not engaged." 
+      account_not_found: "We're sorry but we could not find your account or reset link has been expired." 
+      password_updated: "Password successfully updated"
+      user_not_found: "No user found for that email address."
+      instructions_sent: "Instructions have been emailed to you. Please check your email."
