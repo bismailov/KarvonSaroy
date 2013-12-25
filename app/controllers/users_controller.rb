@@ -35,7 +35,8 @@ class UsersController < ApplicationController
       @user.deliver_verification_instructions!
       sign_in @user
       flash[:success] = t("messages.registration_welcome")
-      redirect_to @user
+      # redirect_to @user
+      redirect_to help_path
     else
       render 'new'
   end

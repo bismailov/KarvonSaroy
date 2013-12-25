@@ -1,36 +1,16 @@
+
+Add dynamic search filtering for dictionary plugin
+--------
+tags:student advanced
+
+https://github.com/activerecord-hackery/ransack
+http://blog.joshsoftware.com/2011/09/28/filter-js-client-side-search-filtering-using-json-and-jquery/
+
 Add yaml for secret information
 --------
 tags:student
 
 Move default email to there from notifier
-
-Add register link to other pages
--------
-tags:student
-
-Create multipart alternative emails
-------
-tags:student
-
-See email rails doc, 2.1.3.
-
-Update default hash in mailer class
--------
-tags: student
-
-Start sending email to users
---------
-tags:student
-
-Add help page
-----------
-tags:student
-
-Recommendations for parents, which books to read, dictionaries.
-
-Fill about page
-------------
-tags:student
 
 Add uzbek desc in student level index
 ----------
@@ -43,11 +23,6 @@ tags: advanced optional
 Add logo/site name on fp
 ------
 tags: guest
-
-
-Expand /about page
-------
-tags:guest
 
 Summary page or link on /courses/1 for course vocabulary
 --------
@@ -84,13 +59,6 @@ tags: student
 Chosen courses, completed courses, progress, activity report, contact information, 
 registration date.  
 
-Add email validation
--------
-tags:student
-
-Add password reset thru email
--------
-tags:student
 Add phone number validation
 -----------
 tags:student optional advanced
@@ -213,5 +181,41 @@ DONE Add edit link on profile page for all users
 tags: student
 
 DONE Sort /courses page
+--------
+tags:student
+
+DONE Add register link to other pages
+-------
+tags:student
+
+DONE Update default hash in mailer class
+-------
+tags: student
+
+LATER Create multipart alternative emails
+------
+tags:student
+
+See email rails doc, 2.1.3.
+
+DONE Add email validation
+-------
+tags:student
+
+DONE Add password reset thru email
+-------
+tags:student
+
+DONE Add help page
+----------
+tags:student
+
+Recommendations for parents, which books to read, dictionaries.
+
+DONE Expand /about page
+------
+tags:guest
+
+DONE Optimize images
 --------
 tags:student

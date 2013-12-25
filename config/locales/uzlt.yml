@@ -82,26 +82,27 @@ uzlt:
     profile: Profil
     home: Bosh sahifa
     about: Biz haqimizda
+    help: Yordam
     settings: Ma'lumotni o'zgartirish
     users: Qo'llanuvchilar
     account: Buyruqlar
-    all_users: Barcha qo'llanuvchilar
-    all_subjects: Barcha predmetlar
+    all_users: Qo'llanuvchilar
+    all_subjects: Predmetlar
     new_subject: Yangi predmet qo'shish
     edit_subject: Predmetni tahrirlash
-    all_student_levels: Barcha o'quvchi darajalari
+    all_student_levels: O'quvchi darajalari
     new_student_level: Yangi o'quvchi darajasini qo'shish
     edit_student_level: O'quvchi darajasini tahrirlash
-    all_courses: Barcha kurslar 
+    all_courses: Kurslar 
     new_course: Yangi kurs qo'shish
     edit_course: Kursni tahrirlash
-    all_lessons: Barcha darslar 
+    all_lessons: Darslar 
     new_lesson: Yangi dars qo'shish
     edit_lesson: Darsni tahrirlash 
     delete: o'chirish (delete)
     edit: tahrirlash (edit)
     back: orqaga
-    administration: Boshqaruv menusi
+    administration: Bosh menu
     course_author: Kurs muallifi
     lessons_count: Darslar soni
     update_password: Parolimni o'zgartir

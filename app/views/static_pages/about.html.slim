@@ -1,4 +1,29 @@
 - provide(:title, "About")
 
-h1 About KarvonSaroy.uz
-/p Find me in app/views/static_pages/about.html.slim
+
+.row
+  .span7
+    h3 Biz haqimizda. Qisqacha.
+
+    p Ushbu resurs ehtiyoj va talabdan kelib chiqdi. Hozirda kichkintoylarga til o'rgatish zaruriyati mavjud, albatta. Bir vaqtning o'zida zamonaviy tehnologiyalardan foydalanishga, mavzularni sodda va kichik bo'laklarda berilishiga harakat qildik. Internet har bir honadonga kirib kelayapti, ma'lumotni video ko'rinishida berish imkoni paydo bo'lgan. Bularning barchasi qulay va oson o'quv jarayonini tuzishga o'z hissasini qo'shadi.
+
+    p Asosiy e'tiborimizni quyidagi jarayonlarga qaratdik:
+
+    ul
+      li bolakaylar saytdan, darslardan mustaqil foydalana olishlari;
+      li darslar qisqa bo'lishi;
+      li dars o'tishga kompleks yondashish.
+
+    p 
+      => link_to("Qo'shimcha ma'lumot", help_path)
+      'bilan tanishib chiqishni tavsiya etamiz. <br/> Biz bilan aloqa uchun elektron pochta manzilimiz:
+      a href='mailto:info@elif.uz' = KarvonSaroy::Application.config.APP_EMAIL.downcase 
+      '.
+      br
+      'Facebookda bizga qo'shiling:
+      = link_to image_tag("/facebookbox2.gif"), KarvonSaroy::Application.config.APP_FB, target: "_blank"
+      p Fikr va mulohazalaringizni kutib qolamiz, bizga qiziq.
+
+  .span5
+
+    = image_tag "/Shanghai-12.jpg"

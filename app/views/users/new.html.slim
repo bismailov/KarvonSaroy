@@ -1,10 +1,13 @@
 - provide(:title, t('messages.registration') )
-h1 = t('messages.registration')
 .row
-  .span6.offset3
+  .span3.offset1
+    h3 = t('messages.registration')
     = form_for(@user) do |f|
       
       = render 'fields', f: f
 
-      = f.submit t("messages.register_me"), class: "btn btn-large btn-primary"
-    /*end*/
+      = f.submit t("messages.register_me"), class: "btn btn-medium btn-primary"
+
+  .span5.offset1
+    br
+    = image_tag "/istanbul-1-12.jpg"

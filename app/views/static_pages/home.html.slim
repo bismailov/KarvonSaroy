@@ -9,7 +9,7 @@
         h3 Bolalarga ingliz tili video darslari!
   
         p #{KarvonSaroy::Application.config.APP_NAME} saytida ingliz tili bo'yicha boshlang'ich 
-          video darlarini topishingiz mumkin.       
+          video darslarini topishingiz mumkin.       
 
         p O'qishni boshlash uchun ro'yxatdan o'ting ⇨
 
@@ -25,16 +25,16 @@
     .span3.offset1
       = form_for(@user) do |f|
       
-        = 
         = render 'users/fields', f: f
 
         p = f.submit t("messages.register_me"), 
-          class: "btn btn-large btn-primary"
+          class: "btn btn-large btn-primary center"
+        /*br*/
+        hr
         p.center Yoki &nbsp; #{link_to t("messages.session.sign_in").downcase, signin_path, class:"btn btn-medium"} 
 
-        hr
 .row
-  .span7.offset1
+  .span7.offset0
 
     p Darslar kurslarga to'plangan. #{link_to "Kurslar", courses_path} o'quvchilar #{link_to "bilim darajalari", student_levels_path} va #{link_to "yoshlari", subjects_path} bo'yicha bo'lingan.
       Har bir dars qisqa va alohida mavzuni qamrab oladi. Kikchintoylar bir kunda cheklangan 
