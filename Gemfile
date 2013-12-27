@@ -19,7 +19,7 @@ gem 'jwplayer-rails', '1.0.1'
 gem 'paperclip', '3.5.1'
 gem "irwi", "0.4.2"
 # gem "cyrillizer", "0.1.0"
-gem "cyrillizer", git: "git@github.com:bismailov/cyrillizer.git"
+gem "cyrillizer", git: "git://github.com/bismailov/cyrillizer.git"
 
 gem 'faker', '1.1.2'
 
