@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131220060756) do
+ActiveRecord::Schema.define(:version => 20131225141443) do
 
   create_table "courses", :force => true do |t|
     t.string   "title"
@@ -75,5 +75,32 @@ ActiveRecord::Schema.define(:version => 20131220060756) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
+
+  create_table "wiki_page_versions", :force => true do |t|
+    t.integer  "page_id",    :null => false
+    t.integer  "updator_id"
+    t.integer  "number"
+    t.string   "comment"
+    t.string   "path"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "updated_at"
+  end
+
+  add_index "wiki_page_versions", ["page_id"], :name => "index_wiki_page_versions_on_page_id"
+  add_index "wiki_page_versions", ["updator_id"], :name => "index_wiki_page_versions_on_updator_id"
+
+  create_table "wiki_pages", :force => true do |t|
+    t.integer  "creator_id"
+    t.integer  "updator_id"
+    t.string   "path"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "wiki_pages", ["creator_id"], :name => "index_wiki_pages_on_creator_id"
+  add_index "wiki_pages", ["path"], :name => "index_wiki_pages_on_path", :unique => true
 
 end

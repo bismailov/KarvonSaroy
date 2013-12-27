@@ -1,5 +1,7 @@
 KarvonSaroy::Application.routes.draw do
 
+  wiki_root '/wiki'
+
   KarvonSaroy::Application.routes.default_url_options[:host] = KarvonSaroy::Application.config.APP_NAME
 
   # get "subjects/new"
