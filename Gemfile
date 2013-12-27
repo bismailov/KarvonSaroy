@@ -33,6 +33,8 @@ gem 'slim', '2.0.0'
 
 group :development do
   gem "letter_opener", "1.2.0"
+  gem "better_errors", "1.1.0"
+  gem "bullet", "4.7.1"
 end
 
 group :test, :development do

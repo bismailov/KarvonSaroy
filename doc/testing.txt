@@ -18,6 +18,17 @@ If you're migrating from Capybara 1.x, try:
 
 Details here: http://www.elabs.se/blog/60-introducing-capybara-2-1
 
+------------------------------
+RoR Rspec and Capybara integration:
+_append_ following at the end of spec_helper.rb
+
+module ::RSpec::Core
+  class ExampleGroup
+    include Capybara::DSL
+    include Capybara::RSpecMatchers
+  end
+end
+
 ------------
 
 http://eggsonbread.com/2010/03/28/my-rspec-best-practices-and-tips/

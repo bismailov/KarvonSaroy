@@ -16,6 +16,9 @@
 #
 
 class User < ActiveRecord::Base
+
+  default_scope order: 'users.surname ASC'
+
   attr_accessible :email, :name, :surname, :password, :password_confirmation
   # attr_reader :perishable_token
   attr_protected :role #look at ROLES 
@@ -37,7 +40,6 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true 
   validates :role, inclusion: { in: ROLES }
 
-  default_scope order: 'users.surname ASC'
 
 
   def deliver_verification_instructions!
