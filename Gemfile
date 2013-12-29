@@ -14,18 +14,9 @@ gem 'bootstrap-wysihtml5-rails', '0.3.1.23'
 gem 'jwplayer-rails', '1.0.1'
 gem 'paperclip', '3.5.1'
 gem "irwi", "0.4.2"
-<<<<<<< HEAD
-# gem "cyrillizer", "0.1.0"
 gem "cyrillizer", git: "git://github.com/bismailov/cyrillizer.git"
-
 gem 'faker', '1.1.2'
-
-# http://rubygems.org/gems/slim
-# as an alternative to ERB
-=======
-gem "cyrillizer", git: "git@github.com:bismailov/cyrillizer.git"
 gem "RedCloth", "4.2.9"
->>>>>>> adding-wiki
 gem 'slim', '2.0.0'
 
 
@@ -53,9 +44,6 @@ group :test do
   gem 'faker', '1.1.2'
 end
 
-group :production do
-  gem 'rails_12factor'
-end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -64,6 +52,12 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
+
+
+#for Heroku
+# group :production do
+  # gem 'rails_12factor'
+# end
 
 
 #from Zombie School 2 video number 4
