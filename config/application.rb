@@ -66,7 +66,7 @@ module KarvonSaroy
 
     # For Heroku
     # http://stackoverflow.com/questions/11742617/heroku-were-sorry-but-something-went-wrong
-    config.assets.initialize_on_precompile = false
+    # config.assets.initialize_on_precompile = false
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

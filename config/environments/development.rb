@@ -52,6 +52,9 @@ KarvonSaroy::Application.configure do
     Bullet.rails_logger = true
     # Bullet.airbrake = true
     Bullet.add_footer = true
+    # Bullet.add_whitelist :type => :unused_eager_loading, :class_name => "Course", :association => :subjects
+    # Bullet.add_whitelist :type => :unused_eager_loading, :class_name => "Course", :association => :student_levels
+    Bullet.unused_eager_loading_enable = false
   end
 
 end

@@ -83,10 +83,13 @@ uzlt:
       sign_out: Saytdan chiqish
       invalid_credentials: Email yoki parol noto'g'ri kiritildi.
       please_sign_in: Iltimos, saytga kiring.
+      sign2: insider
+      sign1: sign #{sign2} masha
   ui:
     profile: Profil
     home: Bosh sahifa
     about: Biz haqimizda
+    contacts: Aloqa
     help: Yordam
     settings: Ma'lumotni o'zgartirish
     users: Qo'llanuvchilar
@@ -107,7 +110,7 @@ uzlt:
     delete: o'chirish (delete)
     edit: tahrirlash (edit)
     back: orqaga
-    administration: Bosh menu
+    administration: Asosiy menu
     course_author: Kurs muallifi
     lessons_count: Darslar soni
     update_password: Parolimni o'zgartir

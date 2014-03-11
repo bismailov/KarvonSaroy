@@ -8,6 +8,11 @@
 
       = f.submit t("messages.register_me"), class: "btn btn-medium btn-primary"
 
+      hr
+      p.center 
+        'Yoki &nbsp; 
+        '#{link_to t("messages.session.sign_in").downcase, signin_path, class:"btn btn-medium"} 
+
   .span5.offset1
     br
     = image_tag "/istanbul-1-12.jpg"

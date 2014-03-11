@@ -1,5 +1,4 @@
-- provide(:title, "About")
-
+- provide(:title, I18n.t("ui.contacts") ) 
 
 .row
   .span7
@@ -16,14 +15,14 @@
 
     p 
       => link_to("Qo'shimcha ma'lumot", help_path)
-      'bilan tanishib chiqishni tavsiya etamiz. <br/> Biz bilan aloqa uchun elektron pochta manzilimiz:
+      'bilan tanishib chiqishni tavsiya etamiz. 
+    p 
+      'Fikr va mulohazalaringizni kutib qolamiz, bizga qiziq. Emailimiz:
       a href='mailto:info@elif.uz' = KarvonSaroy::Application.config.APP_EMAIL.downcase 
       '.
-      br
+    p  
       'Facebookda bizga qo'shiling:
       = link_to image_tag("/facebookbox2.gif"), KarvonSaroy::Application.config.APP_FB, target: "_blank"
-      p Fikr va mulohazalaringizni kutib qolamiz, bizga qiziq.
-
   .span5
 
     = image_tag "/Shanghai-12.jpg"

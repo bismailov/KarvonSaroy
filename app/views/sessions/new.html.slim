@@ -7,19 +7,23 @@
 
       /*= render 'shared/error_messages', object: f.object*/
 
-      = f.label :email, t("activerecord.attributes.user.email")
-      = f.text_field :email
+      /= f.label :email, t("activerecord.attributes.user.email")
+      = f.text_field :email, placeholder: t("activerecord.attributes.user.email")
 
-      = f.label :password, t("activerecord.attributes.user.password")
-      = f.password_field :password
+
+      /= f.label :password, t("activerecord.attributes.user.password")
+      = f.password_field :password, placeholder: t("activerecord.attributes.user.password")
 
       = f.submit t("messages.session.sign_in"), class: "btn btn-medium btn-primary" 
 
-    
+      br
+
       p
         /*#{t("messages.is_new_user")} #{link_to( t("messages.sign_up_now"), signup_path )}*/
         /*#{t("notifier.password_reset_instructions.need_to_reset_password")} #{link_to( t("notifier.password_reset_instructions.reset_your_password"), new_password_reset_path)}*/
         #{link_to( t("messages.is_new_user")+" "+t("messages.sign_up_now"), signup_path )}
+
+        br
         #{link_to( t("notifier.password_reset_instructions.need_to_reset_password"), new_password_reset_path)}
 
   .span5.offset1

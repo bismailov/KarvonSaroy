@@ -13,12 +13,13 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'bootstrap-wysihtml5-rails', '0.3.1.23'
 gem 'jwplayer-rails', '1.0.1'
 gem 'paperclip', '3.5.1'
-# gem "irwi", "0.4.2"
-gem 'irwi', :git => 'git://github.com/alno/irwi.git'
-gem "cyrillizer", git: "git://github.com/bismailov/cyrillizer.git"
-gem 'faker', '1.1.2'
-gem "RedCloth", "4.2.9"
 gem 'slim', '2.0.0'
+
+# gem "irwi", "0.4.2"
+gem 'irwi', git: 'git://github.com/alno/irwi.git'
+# gem "cyrillizer", git: "git://github.com/bismailov/cyrillizer.git"
+gem "cyrillizer", git: "git://github.com/dalibor/cyrillizer.git"
+gem "RedCloth", "4.2.9"
 
 
 gem 'annotate', '2.5.0', group: :development

@@ -3,8 +3,7 @@ class CoursesController < ApplicationController
                  
   #GET /courses
   def index
-    # @courses = Course.paginate( page: params[:page], include: [:subject, :student_level] )
-    @courses = Course.find(:all, include: [:subject, :student_level] )
+    @courses = Course.paginate( page: params[:page], include: [:subject, :student_level] )
     #moved ordering to the model (default_scope)
     # @courses = Course.order("subject_id").order("student_level_id")
   end

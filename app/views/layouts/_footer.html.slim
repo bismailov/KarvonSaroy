@@ -1,14 +1,12 @@
 footer.footer
-  small  
-    '© 2013,
+  small
+    '© 2014, 
     a> href='mailto:info@elif.uz' = KarvonSaroy::Application.config.APP_NAME
     
   nav
     ul
-      /*- if current_user != nil*/
-        /*li #{current_user.role}*/
-      li = link_to image_tag("/facebookbox2.gif"), KarvonSaroy::Application.config.APP_FB, target: "_blank"
+      - unless request.original_url == contacts_url 
+        li = link_to image_tag("/facebookbox21.gif"), KarvonSaroy::Application.config.APP_FB, target: "_blank"
       li = current_user.try(:role)
       li = link_to t("ui.home"), root_path
-      li = link_to t("ui.about"), about_path
-      /*li = link_to "Blog", "#" */
+      li = link_to t("ui.contacts"), contacts_path

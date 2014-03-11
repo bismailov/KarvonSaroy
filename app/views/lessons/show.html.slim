@@ -12,25 +12,36 @@ ul.breadcrumb
   li = link_to @course.title.humanize, @course
 
 .row
-  aside.span8
-    section
-      - if @lesson.previous_lesson
-        = link_to "⇦ #{@lesson.previous_lesson.title} ", course_lesson_path(@course, @lesson.previous_lesson) 
-        - if @lesson.next_lesson
-          '|
-      = link_to " #{@lesson.next_lesson.title} ⇨", course_lesson_path(@course, @lesson.next_lesson) if @lesson.next_lesson
-      h1 = @lesson.title.capitalize
+  .span8
 
-      - if ["admin", "editor"].include?( current_user.try(:role) ) 
-        => link_to t('ui.edit'), edit_course_lesson_path(@course, @lesson)
-        '|
-      = link_to t('ui.back'), course_lessons_path
-      = jwplayer_assets
-      br
-      br
-      /*= jwplayer({width: 500, height: 200, file:@lesson.media_file})*/
-      /*= jwplayer({file:@lesson.media_file})*/
-      = jwplayer({file:@lesson.video_attachment.to_s.split('?')[0]})
-      br
-      br
-      == @lesson.content
+    .progress
+      <div class="bar" style="width: #{@course_progress}%;"></div>
+
+      /*- if @lesson.previous_lesson*/
+        /*= link_to "⇦ #{@lesson.previous_lesson.title} ", course_lesson_path(@course, @lesson.previous_lesson) */
+        /*- if @lesson.next_lesson*/
+          /*'|*/
+      /*= link_to " #{@lesson.next_lesson.title} ⇨", course_lesson_path(@course, @lesson.next_lesson) if @lesson.next_lesson*/
+
+    ul.pager
+      - if @lesson.previous_lesson
+        li.previous = link_to "← #{@lesson.previous_lesson.title} ", course_lesson_path(@course, @lesson.previous_lesson) 
+      - if @lesson.next_lesson
+        li.next = link_to " #{@lesson.next_lesson.title} →", course_lesson_path(@course, @lesson.next_lesson) if @lesson.next_lesson
+
+
+    h3 = @lesson.title.capitalize
+
+    - if ["admin", "editor"].include?( current_user.try(:role) ) 
+      => link_to t('ui.edit'), edit_course_lesson_path(@course, @lesson)
+      '|
+    = link_to t('ui.back'), course_lessons_path
+    = jwplayer_assets
+    br
+    br
+    /*= jwplayer({width: 500, height: 200, file:@lesson.media_file})*/
+    /*= jwplayer({file:@lesson.media_file})*/
+    = jwplayer({file:@lesson.video_attachment.to_s.split('?')[0], height: 360, width: 640})
+    br
+    br
+    == @lesson.content

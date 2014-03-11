@@ -1,19 +1,16 @@
-li
-  => link_to(course.title.capitalize, course)
-  /*' | #{t("ui.lessons_count")}: #{course.lessons.count}*/
-  |&nbsp;&nbsp;&nbsp;
-  '(#{course.lessons.count})
-  br
-  '#{course.subject.title.capitalize}
-  |&nbsp;&nbsp;&nbsp;
-  '#{course.student_level.title.capitalize}
-  - if current_user and ('admin' == current_user.role or 'editor' == current_user.role)
+/*li*/
+.panel.panel-default
+  .panel-heading
+    => link_to(course.title.capitalize, course)
     |&nbsp;&nbsp;&nbsp;
-    /*' |   */
-    /*=> link_to t('ui.edit'), edit_course_path(course)*/
-    => link_to '', edit_course_path(course), class:'icon-edit'
-    /*'|*/
-    /*= link_to t('ui.delete'), course, method: :delete, data: { confirm: t("messages.are_you_sure") }*/
-    = link_to '', course, method: :delete, data: { confirm: t("messages.are_you_sure") }, class:'icon-remove'
+    '(#{course.lessons.count})
+  br
+  .panel-body
+    '#{course.subject.title.capitalize}
+    |&nbsp;&nbsp;&nbsp;
+    '#{course.student_level.title.capitalize}
+    - if current_user and ('admin' == current_user.role or 'editor' == current_user.role)
+      |&nbsp;&nbsp;&nbsp;
+      => link_to '', edit_course_path(course), class:'icon-edit'
+      = link_to '', course, method: :delete, data: { confirm: t("messages.are_you_sure") }, class:'icon-remove'
 
-    /*http://getbootstrap.com/2.3.2/base-css.html#images*/

@@ -1,12 +1,18 @@
 header.navbar.navbar-fixed-top
   .navbar-inner
     .container
-      = link_to KarvonSaroy::Application.config.APP_NAME, root_path, id: "logo"
-      /*= link_to 'Elif.uz', root_path, id: "logo"*/
+      = link_to (image_tag "/elif.gif"), root_path, class: "brand"
+
+      /= link_to KarvonSaroy::Application.config.APP_NAME, root_path, id: "logo"
+      /= link_to KarvonSaroy::Application.config.APP_NAME, root_path, class: "brand"
+
       nav
         ul.nav.pull-right
           - unless request.original_url == root_url 
-            li = link_to t("ui.home"), root_path
+            - if (rand() * 5).to_i == 0 
+              li = link_to(image_tag("/Home-icon16.png"), root_path)
+            - else 
+              li = link_to t("ui.home"), root_path
 
           li#fat-menu.dropdown 
             a[href="#" class="dropdown-toggle" data-toggle="dropdown"] #{t("ui.administration")} <b class=caret></b>

@@ -1,0 +1,7 @@
+.alert.alert-block
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+    h2 = t("messages.session.please_sign_in") 
+      
+    p.center  #{link_to t("messages.registration"), signup_path} 
+    p.center #{link_to t("messages.session.sign_in"), signin_path}

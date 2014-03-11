@@ -19,7 +19,15 @@ class LessonsController < ApplicationController
 
   #GET /courses/:course_id/lessons/:id
   def show
+    unless signed_in?
+      redirect_to signup_path, alert: t("messages.session.please_sign_in")
+    end
+
     @lesson = @course.lessons.find(params[:id])
+
+    @lesson_ordinal_number = @course.lessons.pluck(:id).index(params[:id].to_i)+1
+    @course_progress = (100 / @course.lessons.count * @lesson_ordinal_number).to_i 
+
   end
 
   #GET /courses/:course_id/lessons/new 

@@ -83,10 +83,13 @@ en:
       sign_out: Sign out
       invalid_credentials: Invalid email/password combination.
       please_sign_in: Please sign in.
+      sign2: insider
+      sign1: sign #{sign2} masha
   ui:
     profile: Profile
     home: Home
     about: About
+    contacts: Contacts
     help: Help
     settings: Settings
     users: Users

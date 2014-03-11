@@ -16,6 +16,8 @@ KarvonSaroy::Application.routes.draw do
 
   match '/about', to: 'static_pages#about'
   match '/help', to: 'static_pages#help'
+  match '/help_uz_cyr', to: 'static_pages#help_uz_cyr'
+  match '/contacts', to: 'static_pages#contacts'
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete

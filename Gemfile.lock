@@ -10,8 +10,8 @@ GIT
       rails_autolink (>= 1.0)
 
 GIT
-  remote: git://github.com/bismailov/cyrillizer.git
-  revision: 31ba7b5308763dbf14d4efaa03a22c0abc2c5af2
+  remote: git://github.com/dalibor/cyrillizer.git
+  revision: eeff9d12fe854abd4688927dcb6b0c6786d11fd6
   specs:
     cyrillizer (0.2.0)
 

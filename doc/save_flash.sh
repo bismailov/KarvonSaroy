@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#saving flash (flv) video files from Goolge Chrome cache
+
 pidNum=$(ps ax | grep flash | grep chrome | grep -v "grep" | sed -e 's/^ *//g' -e 's/ *$//g' | tr -s " " | cut -d " " -f 1)
 procNum=$(ls -l /proc/${pidNum}/fd | grep Flash | tr -s " " | cut -d " " -f 9)
 

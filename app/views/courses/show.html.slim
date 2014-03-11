@@ -27,9 +27,11 @@ ul.breadcrumb
       = @course.objectives
   
   main.span5
-    br
+    - unless signed_in?
+      = render 'mandatory_signup'
+
     - if ["admin", "editor"].include?( current_user.try(:role) ) 
-      = link_to  t('ui.new_lesson'), new_course_lesson_path(@course), class: "btn btn-default btn-primary"
+      = link_to t('ui.new_lesson'), new_course_lesson_path(@course), class: "btn btn-default btn-primary"
     br
     br
     p #{t("ui.lessons_count")}: #{@course.lessons.count}

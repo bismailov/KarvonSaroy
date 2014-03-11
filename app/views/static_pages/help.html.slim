@@ -3,42 +3,60 @@
 .row
   .span7
 
-    h3 Ingliz tili. Oson.
+    h3 Ingliz tili. Oson. 
+    
+    b 
+      '#{"( lotinchada / "}
+      = link_to "кириллчада", help_uz_cyr_path
+      '#{" )"}
+
+    br
+    br
 
     p Assalomu alaykum muhtaram saytimiz mehmonlari!
 
-    p Bu yerda siz hozirgi kunda dolzarb bo'lgan ingliz tilidan yordam olishingiz mumkin.
+    p Maqsadimiz – yosh bolalarga <b>ingliz tilini</b> sodda va qiziqarli tarzda o'rgatish va bunda sizga yordamchi bo'lish.
+    
+    p Ingliz tili jahon miqyosida muomala vositasiga aylandi. Yevropa, Amerikalar, Osiyo mamlakatlari, Afrika; bular hammasida inglizchada muvaffaqiyatli ish yuritish, o'qish va yashash mumkin. Kitoblar, ilmiy izlanishlar, yangiliklar... bular birinchi bo'lib  inglizchada chop etilayapti.
 
-    Why we need English language?
-    Why register
-    How to start
-    Urgency
-    Methodology
-    We need books; dictionaries
-    We need intestments;time;money
-    Follow us on Facebook
-    Follow us thru mailinglist
+    p <b>Til o'rgatishni yoshlikdan boshlash lozim, deb o'ylaymiz</b>. 5-6 yoshdan, hatto to'rt yoshdan boshlash foydadan holi emas. Saytimizda kichkintoylar uchun oson va qiziqarli tarzda tuzilgan, ularning o'zlashtirish tezligiga moslasha oladigan o'quv mashg'ulotlarini berib boramiz. 
 
-    Add level descriptions
-    Add reference to small and abrridged books
-    Not too much, but a little everyday
-    Kichkinaligidan til o'rgatish oson. 
-    Til ichida yashash.
-    KPSS metodi
-    why limit lesson?
-<<<<<<< HEAD
-      why register
+    p Bu yoshdagi bolalar yangi so'zlarni, iboralarni osonlikcha o'zlashtiradilar, tilni to'laligicha qabul qiladilar, ular til o'rganishni qiyin deb bilmaydilar; <b>farzand umridagi oltin davrdan foydalanib qoling</b>, fursatni boy bermang. Va bunda bizning saytimiz sizga xizmat qiladi.
 
-http://www.readingbear.org/gettingstarted.aspx
+    p 
+      b> Albatta
+      = link_to "ro'yxatdan o'ting", signup_path
+      ', bunda testlar natijalarini, joriy darsning raqamini saqlashga va boshqa amallarni bajarishga imkon paydo bo'ladi.
 
-By age 3, children whose parents were professionals had vocabularies of about 1,100 words, and children whose parents were on welfare had vocabularies of about 525 words.
+    p 
+      'Saytimiz video darslar, uslubiy qo'llanmalar yordamida ingliz tilini bilmaydigan ota-onalarga ham o'z farzandlariga tilni o'rgatish imkonini beradi. Va buni oson hamda arzonligini ta'minlashni oldimizga maqsad qilib qo'ydik. Lekin shunda ham ta'kidlashimiz kerak – til o'rganish jarayoniga vaqt tikishingiz shart, ta'lim jarayoniga jiddiy qatnashishingiz lozim. Sizdan talab etiladigan narsalar:
+      ul
+        li xohish-istak, siz tarafdan hamda kichkintoy ham qiziqishi shart;
+        li vaqt: har kuni ozginadan shug'ullantirish afzal;
+        li sifatli lug'at va daftarlarni xarid qilish, ulardan foydalanishni o'rgatish; 
+        li o'tilgan darslarni qaytarish, ibora va so'zlarni qo'llash.
+        
+    p Eng oddiy kurslarimizga yozilishdan boshlang. Farzandingiz birinchi navbatda ingliz-lotin alifbosi bilan yaqindan tanishib, uni yod olishi shart, harflarning nomini bilishi lozim. Keyin murakkabroq kurslarga navbatma-navbat o'tib boring. O'quv jarayonini tezlashtirishga intilmang, <b>bolaga qulay va qiziqarli bo'lishi lozim</b>. Zerikishni boshladimi, hayoli to'ziyaptimi, darsni tugating.
 
-Reading Bear introduces and explains, in a way accessible even to three-year-olds, over 1,200 basic vocabulary items. Repeated viewings of each presentation will go a long way to imparting much of the sort of basic vocabulary that children of professionals have mastered. So those of us behind Reading Bear feel very comfortable in saying that our resource helps develop not only decoding skills but also the sort of basic vocabulary that is so essential to learning to read.
+    p Barcha narsalar chiroyli bo'lishiga harakat qilaylik. Darslar maxsus daftarda, tartibli ravishda yozilsin, parcha-parcha qog'ozlar, alohida betlar vaqt o'tishi bilan noqulay bo'lib boradi, o'quvchi qiziqishini tushurib yuboradi. Qulay bo'lsa, komputerdagi lug'atlardan foydalansa bo'ladi (bozorda asosan inglizcha-ruschalari mavjud).
 
-One often overlooked advantage of teaching to very young children is that they are not intimidated by reading. They don't know that it's supposed to be hard. If you proceed at the child's pace rather than at a pace you pre-determined for him or her, if you treat it as a game, and if you take breaks when and for as long as needed, then your little student will have fun and learn much more than you might have thought possible.
-=======
-    why register
->>>>>>> adding-wiki
+    = image_tag "/Notebooks-Elastic-New-12.jpg"
+
+    p Kurslarimizga o'yin elementlarini kiritib boramiz, studentlarimiz zaruriyatni his eta boshlasinlar; ballar, medallar to'play oladilar, reytinglari chop etiladi. Qisqasi, bolalarga darslar <b>o'yindek bo'lishini</b> ta'minlaylik.
+
+    p Nima bo'lganda ham, savollaringizga #{link_to "javob berishga", contacts_path} tayyormiz. Til o'rgatish bir haftalik ish emas, albatta, savollar, shubhalar paydo bo'ladi, bularni birgalikda hal qilamiz. Bu mavzu bo'yicha #{link_to "firklarimiz", KarvonSaroy::Application.config.APP_FB} bilan tanishib boring.
+
+
+  /*  Add level descriptions*/
+  /*  Add reference to small and abrridged books*/
+  /*  Til ichida yashash.*/
+  /*  KPSS metodi*/
+
+  /*  www readingbear org gettingstarted.aspx*/
+
+  /*  By age 3, children whose parents were professionals had vocabularies of about 1,100 words, and children whose parents were on welfare had vocabularies of about 525 words.*/
+
+  /*  Reading Bear introduces and explains, in a way accessible even to three-year-olds, over 1,200 basic vocabulary items. Repeated viewings of each presentation will go a long way to imparting much of the sort of basic vocabulary that children of professionals have mastered. So those of us behind Reading Bear feel very comfortable in saying that our resource helps develop not only decoding skills but also the sort of basic vocabulary that is so essential to learning to read.*/
 
   .span5
-    = image_tag "/london-121.jpg"
+    = image_tag "/hirosaki_castle_japan-wide-12.jpg"

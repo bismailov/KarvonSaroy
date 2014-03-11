@@ -1,16 +1,21 @@
 = render 'shared/error_messages', object: f.object
 
-= f.label :name, t("activerecord.attributes.user.name")
-= f.text_field :name
+/= f.label :name, t("activerecord.attributes.user.name")
+= f.text_field :name, placeholder: t("activerecord.attributes.user.name")
 
-= f.label :surname, t("activerecord.attributes.user.surname")
-= f.text_field :surname
 
-= f.label :email, t("activerecord.attributes.user.email")
-= f.text_field :email
+/= f.label :surname, t("activerecord.attributes.user.surname")
+= f.text_field :surname, placeholder: t("activerecord.attributes.user.surname")
 
-= f.label :password, t("activerecord.attributes.user.password")
-= f.password_field :password
 
-= f.label :password_confirmation, t("activerecord.attributes.user.password_confirmation")
-= f.password_field :password_confirmation
+/= f.label :email, t("activerecord.attributes.user.email")
+= f.text_field :email, placeholder: t("activerecord.attributes.user.email")
+
+
+/= f.label :password, t("activerecord.attributes.user.password")
+= f.password_field :password, placeholder: t("activerecord.attributes.user.password")
+
+
+/= f.label :password_confirmation, t("activerecord.attributes.user.password_confirmation")
+= f.password_field :password_confirmation, placeholder: t("activerecord.attributes.user.password_confirmation")
+

@@ -13,3 +13,9 @@ add model file: attr_accessible :title, :description
 
 change string to text
 rails generate migration remove_description_from_student_levels description:string
+
+Rails developers don’t mind adding indexes for foreign keys at the time that those are created. In
+the case of our migration example, you’d add the following statements.
+add_index :timesheets, :user_id
+add_index :expense_reports, :user_id
+
