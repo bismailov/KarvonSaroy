@@ -64,7 +64,7 @@ end
 
 #from Zombie School 2 video number 4
 #for mass mailing list and etc
-#gem madmimi 
+#gem madmimi
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -73,7 +73,7 @@ end
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'

@@ -1,0 +1,7 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: elif
+  pool: 3
+  username: elif
+  password: ObZGLKUap1ZvmF3
