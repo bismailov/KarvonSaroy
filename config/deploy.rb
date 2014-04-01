@@ -3,7 +3,7 @@ local_user = ENV['USER'] || ENV['USERNAME']
 ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
 set :default_environment, { 'PATH' => '$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH' }
-set :user, 'root'
+set :user, 'vps-73-3'
 set :application, "elif"
 set :use_sudo, false
 set :scm, :git
