@@ -7,7 +7,7 @@ set :user, 'vps-73-3'
 set :application, "elif"
 set :use_sudo, false
 set :scm, :git
-set :repository, 'git@bitbucket.org/bismailov/karvonsaroy.git'
+set :repository, 'git@bitbucket.org:bismailov/karvonsaroy.git'
 set :keep_releases, 5
 set :rails_env, "production" #added for delayed job
 
