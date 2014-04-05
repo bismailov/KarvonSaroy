@@ -28,6 +28,9 @@ group :development do
   gem "better_errors", "1.1.0"
   gem "bullet", "4.7.1"
   gem "binding_of_caller", "0.7.2"
+  gem 'rvm-capistrano'
+  gem 'rvm'
+
 end
 
 
@@ -73,7 +76,6 @@ end
 # gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
-
+gem 'capistrano', '2.15.5'
 # To use debugger
 # gem 'debugger'

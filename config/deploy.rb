@@ -1,8 +1,9 @@
 require "bundler/capistrano"
+require "rvm/capistrano"
 local_user = ENV['USER'] || ENV['USERNAME']
 ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
-set :default_environment, { 'PATH' => '$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH' }
+# set :default_environment, {'PATH' => "$PATH:$HOME/.rvm/bin"}
 set :user, 'vps-73-3'
 set :application, "elif"
 set :use_sudo, false

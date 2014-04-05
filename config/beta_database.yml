@@ -5,3 +5,4 @@ production:
   pool: 3
   username: elif
   password: ObZGLKUap1ZvmF3
+  host: localhost
