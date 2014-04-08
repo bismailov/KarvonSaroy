@@ -1,43 +1,47 @@
-deploy_to  = "/data/elif"
-rails_root = "#{deploy_to}/current"
-pid_file   = "#{deploy_to}/shared/pids/unicorn.pid"
-socket_file= "#{deploy_to}/shared/unicorn.sock"
-log_file   = "#{rails_root}/log/unicorn.log"
-err_log    = "#{rails_root}/log/unicorn_error.log"
-old_pid    = pid_file + '.oldbin'
+upstream elif_server {
+  server unix:/data/elif/shared/unicorn.sock fail_timeout=0; # Местоположение сокета должно совпадать с настройками файла config/unicorn.rb от корня вашего $
+}
 
-timeout 180
-worker_processes 3 # Здесь тоже в зависимости от нагрузки, погодных условий и текущей фазы луны
-listen socket_file, :backlog => 2048
-pid pid_file
-stderr_path err_log
-stdout_path log_file
+server {
+  listen 80;
+  server_name elif.uz www.elif.uz;
 
-preload_app true # Мастер процесс загружает приложение, перед тем, как плодить рабочие процессы.
+  client_max_body_size       70M;
+  root /data/elif/current/public;
+  access_log /data/elif/shared/log/access.log;
+  error_log  /data/elif/shared/log/error.log;
+  try_files $uri/index.html $uri.html $uri @elif; # Имя переменной не важно - главное, чтобы в блоке location ниже было аналогичное
 
-GC.copy_on_write_friendly = true if GC.respond_to?(:copy_on_write_friendly=) # Решительно не уверен, что значит эта строка, но я решил ее оставить.
+  location  @elif  {
+      proxy_pass http://elif_server; # Часть после http:// должна полностью соответствовать имени в блоке upstream выше.
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_redirect off;
+      proxy_read_timeout          500;
 
-before_exec do |server|
-  ENV["BUNDLE_GEMFILE"] = "#{deploy_to}/current/Gemfile"
-end
 
-before_fork do |server, worker|
-  # Перед тем, как создать первый рабочий процесс, мастер отсоединяется от базы.
-  defined?(ActiveRecord::Base) and
-  ActiveRecord::Base.connection.disconnect!
+      client_max_body_size       7M;
+      root /data/elif/current/public;
 
-  # Ниже идет магия, связанная с 0 downtime deploy.
-  if File.exists?(old_pid) && server.pid != old_pid
-    begin
-      Process.kill("QUIT", File.read(old_pid).to_i)
-    rescue Errno::ENOENT, Errno::ESRCH
-      # someone else did our job for us
-    end
-  end
-end
+      gzip on;
+      gzip_min_length  1024;
+      gzip_comp_level 8;
+      gzip_http_version 1.0;
+      gzip_buffers 16 8k;
+      gzip_proxied any;
+      gzip_disable        "MSIE [1-6]\.";
+      gzip_types      text/plain text/css application/x-javascript text/xml application/xml application/xml+rss text/javascript text/json;
+      gzip_vary on;
 
-after_fork do |server, worker|
-  # После того как рабочий процесс создан, он устанавливает соединение с базой.
-  defined?(ActiveRecord::Base) and
-  ActiveRecord::Base.establish_connection
-end
+
+  }
+
+  location ~ ^/assets/ {
+      add_header Last-Modified "";
+      add_header ETag "";
+      gzip_static on;
+      expires max;
+      add_header Cache-Control public;
+  }
+
+}
