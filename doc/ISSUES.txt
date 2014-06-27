@@ -26,23 +26,9 @@ Test email notifications
 ----------
 tags: production
 
-Review training courses
---------
-tags: student blog advanced
-
 Voice chat
 ----------
 tags: student advanced
-
-Talk about TOEFL and IELTS
---------
-tags: student blog
-
-Video review mobile gadgets
-------
-tags: student blog
-
-iPhones, iPads, Galaxies
 
 Vocabulary lists
 --------
