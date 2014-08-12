@@ -30,23 +30,9 @@ Test email notifications
 ----------
 tags: production
 
-Review training courses
---------
-tags: student blog advanced
-
 Voice chat
 ----------
 tags: student advanced
-
-Talk about TOEFL and IELTS
---------
-tags: student blog
-
-Video review mobile gadgets
-------
-tags: student blog
-
-iPhones, iPads, Galaxies
 
 Vocabulary lists
 --------
@@ -57,22 +43,6 @@ Sorted by topic
 Sorted by lesson
 Sorted by course
 
-Video
-------
-tags:student blog
-
-How to choose books, dictionaries
-Why photocopying is bad
-How to choose training centers, TC reviews
-How to teach kids, no grammar; will learn English not grammar, not TOEFL
-How to prepare for TOEFL
-British councel review
-What studies: reading, writing, speaking, listening
-Abridged books, reading in general
-Television listening, satellite, online radios, podcasts
-KPSS method
-Immersion method
-
 Terms of use
 ----
 tags:student
@@ -82,10 +52,6 @@ No guarantee, browser type, non-refundable
 Google analytics
 -------
 tags: advanced
-
-Video on stationary, why photocopy is bad, get neat
--------
-tags:student blog
 
 What kind of notebooks needed
 
@@ -101,13 +67,6 @@ Learn from pechkin email
 -------
 tags:student advanced
 
-Video on alphabet role in English
--------
-tags:student blog
-
-Video review how to choose dictionary, types; electronic ones
---------
-tags: student blog
 
 Add dynamic search filtering for dictionary plugin
 --------
