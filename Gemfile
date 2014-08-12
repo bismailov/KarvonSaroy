@@ -30,7 +30,7 @@ group :development do
   gem "binding_of_caller", "0.7.2"
   gem 'rvm-capistrano'
   gem 'rvm'
-
+  gem 'capistrano', '3.2.1'
 end
 
 
@@ -75,7 +75,5 @@ end
 # Use unicorn as the app server
 gem 'unicorn'
 
-# Deploy with Capistrano
-gem 'capistrano', '2.15.5'
 # To use debugger
 # gem 'debugger'
